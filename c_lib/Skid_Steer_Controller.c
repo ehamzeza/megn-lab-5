@@ -4,7 +4,14 @@ static float K_p = 1424.140388786311;
 static float update_period = 0.001f;
 static float wheel_diameter = 38.5 / 1000.0f;
 
-void Initialize_Skid_Steer( Skid_Steer_Controller_t* p_skid_steer_cntr, float* z_transform_numerator, float* z_transform_denominator, uint8_t z_transform_order,
+void Initialize_Skid_Steer( Skid_Steer_Controller_t
+    float filter_output = Filter_Value(&p_cont->controller, measurement);
+
+    p_cont->target_pos += p_cont->target_vel * dt;
+
+    float error = p_cont->target_pos - filter_output;
+
+    return p_cont->kp * error;* p_skid_steer_cntr, float* z_transform_numerator, float* z_transform_denominator, uint8_t z_transform_order,
                             float wheel_base_width, float conversion_speed_to_control, float max_abs_control, float ( *measurement_left_fcn_ptr )( void ),
                             float ( *measurement_right_fcn_ptr )( void ), void ( *control_left_fcn_ptr )( int16_t ), void ( *control_right_fcn_ptr )( int16_t ) )
 {
@@ -23,10 +30,8 @@ void Initialize_Skid_Steer( Skid_Steer_Controller_t* p_skid_steer_cntr, float* z
 
 void Skid_Steer_Command_Displacement( Skid_Steer_Controller_t* p_skid_steer_cntr, float linear, float angular )
 {
-    // p_skid_steer_cntr->controller_left.target_pos += (linear - angular * (p_skid_steer_cntr->wheel_base_width / 2.0f)) * (2.0f / wheel_diameter);
-    // p_skid_steer_cntr->controller_right.target_pos += (linear + angular * (p_skid_steer_cntr->wheel_base_width / 2.0f)) * (2.0f / wheel_diameter);
-    p_skid_steer_cntr->controller_left.target_pos += 100000.0f + wheel_diameter;
-    p_skid_steer_cntr->controller_right.target_pos += 100000.0f;
+    p_skid_steer_cntr->controller_left.target_pos += 100.0f*(linear - angular * (p_skid_steer_cntr->wheel_base_width / 2.0f)) * (2.0f / wheel_diameter);
+    p_skid_steer_cntr->controller_right.target_pos += 100.0f*(linear + angular * (p_skid_steer_cntr->wheel_base_width / 2.0f)) * (2.0f / wheel_diameter);
 }
 
 void Skid_Steer_Command_Velocity( Skid_Steer_Controller_t* p_skid_steer_cntr, float linear, float angular )
@@ -58,14 +63,6 @@ void Skid_Steer_Control_Update( Skid_Steer_Controller_t* p_skid_steer_cntr, floa
     // } data;
     // data.v1 = pwm_left_capped;
     // USB_Send_Msg( "cf", 'B', &data, sizeof( data ) );
-
-
-
-    if (pwm_left > 50){
-        USB_Send_Str("BIG");
-    } else {
-        USB_Send_Str("SML");
-    }
 
     (*p_skid_steer_cntr->control_left_fcn_ptr)( pwm_left_capped);
     (*p_skid_steer_cntr->control_right_fcn_ptr)(pwm_right_capped);
