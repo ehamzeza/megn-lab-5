@@ -45,8 +45,8 @@
 // Best to identify them as "static" to make them indentified as internal and start with a "_" to identify as internal.
 // Try to initialize them if possible, so their values are never arbitrary.
 
-static float z_transform_numerator[2] = {5.532331437345,-4.757167943833};
-static float z_transform_denominator[2] = {1.000000000000,-0.224836506487};
+static float z_transform_numerator[2] = {1.267010005139,-1.227617973480};
+static float z_transform_denominator[2] = {1.000000000000,-0.960607968342};
 static uint8_t z_transform_order = 2;
 static float wheel_base_width = 0.0848f;
 static float conversion_to_speed_control = 1.0f;
