@@ -1,17 +1,10 @@
 #include "Skid_Steer_Controller.h"
 
-static float K_p = 167785.334174911870;
+static float K_p = 8.004189176860;
 static float update_period = 0.001f;
 static float wheel_diameter = 38.5 / 1000.0f;
 
-void Initialize_Skid_Steer( Skid_Steer_Controller_t
-    float filter_output = Filter_Value(&p_cont->controller, measurement);
-
-    p_cont->target_pos += p_cont->target_vel * dt;
-
-    float error = p_cont->target_pos - filter_output;
-
-    return p_cont->kp * error;* p_skid_steer_cntr, float* z_transform_numerator, float* z_transform_denominator, uint8_t z_transform_order,
+void Initialize_Skid_Steer( Skid_Steer_Controller_t* p_skid_steer_cntr, float* z_transform_numerator, float* z_transform_denominator, uint8_t z_transform_order,
                             float wheel_base_width, float conversion_speed_to_control, float max_abs_control, float ( *measurement_left_fcn_ptr )( void ),
                             float ( *measurement_right_fcn_ptr )( void ), void ( *control_left_fcn_ptr )( int16_t ), void ( *control_right_fcn_ptr )( int16_t ) )
 {
@@ -30,8 +23,8 @@ void Initialize_Skid_Steer( Skid_Steer_Controller_t
 
 void Skid_Steer_Command_Displacement( Skid_Steer_Controller_t* p_skid_steer_cntr, float linear, float angular )
 {
-    p_skid_steer_cntr->controller_left.target_pos += 100.0f*(linear - angular * (p_skid_steer_cntr->wheel_base_width / 2.0f)) * (2.0f / wheel_diameter);
-    p_skid_steer_cntr->controller_right.target_pos += 100.0f*(linear + angular * (p_skid_steer_cntr->wheel_base_width / 2.0f)) * (2.0f / wheel_diameter);
+    p_skid_steer_cntr->controller_left.target_pos += (linear - angular * (p_skid_steer_cntr->wheel_base_width / 2.0f)) * (2.0f / wheel_diameter);
+    p_skid_steer_cntr->controller_right.target_pos += (linear + angular * (p_skid_steer_cntr->wheel_base_width / 2.0f)) * (2.0f / wheel_diameter);
 }
 
 void Skid_Steer_Command_Velocity( Skid_Steer_Controller_t* p_skid_steer_cntr, float linear, float angular )
