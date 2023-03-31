@@ -1,6 +1,5 @@
 file(REMOVE_RECURSE
   "CMakeFiles/Lab4-atmega32u4.elf.dir/Lab4-MotorPWM.c.obj"
-  "CMakeFiles/Lab4-atmega32u4.elf.dir/Lab4-MotorPWM.c.obj.d"
   "Lab4-atmega32u4.elf"
   "Lab4-atmega32u4.elf.pdb"
   "Lab4-atmega32u4.map"

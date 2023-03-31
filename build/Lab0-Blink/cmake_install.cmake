@@ -1,4 +1,4 @@
-# Install script for directory: /home/ehamzeza/megn-lab-5/Lab0-Blink
+# Install script for directory: /u/st/by/ajgall/megn-lab-5/Lab0-Blink
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -30,10 +30,5 @@ endif()
 # Is this installation the result of a crosscompile?
 if(NOT DEFINED CMAKE_CROSSCOMPILING)
   set(CMAKE_CROSSCOMPILING "TRUE")
-endif()
-
-# Set default install directory permissions.
-if(NOT DEFINED CMAKE_OBJDUMP)
-  set(CMAKE_OBJDUMP "/usr/bin/avr-objdump")
 endif()
 

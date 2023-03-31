@@ -1,6 +1,5 @@
 file(REMOVE_RECURSE
   "CMakeFiles/Lab3-atmega32u4.elf.dir/Lab3-Encoder.c.obj"
-  "CMakeFiles/Lab3-atmega32u4.elf.dir/Lab3-Encoder.c.obj.d"
   "Lab3-atmega32u4.elf"
   "Lab3-atmega32u4.elf.pdb"
   "Lab3-atmega32u4.map"

@@ -25,8 +25,8 @@ void Skid_Steer_Command_Displacement( Skid_Steer_Controller_t* p_skid_steer_cntr
 {
     // p_skid_steer_cntr->controller_left.target_pos += (linear - angular * (p_skid_steer_cntr->wheel_base_width / 2.0f)) * (2.0f / wheel_diameter);
     // p_skid_steer_cntr->controller_right.target_pos += (linear + angular * (p_skid_steer_cntr->wheel_base_width / 2.0f)) * (2.0f / wheel_diameter);
-    p_skid_steer_cntr->controller_left.target_pos += 1000.0f + wheel_diameter;
-    p_skid_steer_cntr->controller_right.target_pos += 1000.0f;
+    p_skid_steer_cntr->controller_left.target_pos += 100000.0f + wheel_diameter;
+    p_skid_steer_cntr->controller_right.target_pos += 100000.0f;
 }
 
 void Skid_Steer_Command_Velocity( Skid_Steer_Controller_t* p_skid_steer_cntr, float linear, float angular )
@@ -61,11 +61,11 @@ void Skid_Steer_Control_Update( Skid_Steer_Controller_t* p_skid_steer_cntr, floa
 
 
 
-    // if (pwm_left > 50){
-    //     USB_Send_Str("BIG");
-    // } else {
-    //     USB_Send_Str("SML");
-    // }
+    if (pwm_left > 50){
+        USB_Send_Str("BIG");
+    } else {
+        USB_Send_Str("SML");
+    }
 
     (*p_skid_steer_cntr->control_left_fcn_ptr)( pwm_left_capped);
     (*p_skid_steer_cntr->control_right_fcn_ptr)(pwm_right_capped);
