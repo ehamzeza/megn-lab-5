@@ -1,6 +1,6 @@
 #include "Skid_Steer_Controller.h"
 
-static float K_p = 1424.140388786311;
+static float K_p = 167785.334174911870;
 static float update_period = 0.001f;
 static float wheel_diameter = 38.5 / 1000.0f;
 
