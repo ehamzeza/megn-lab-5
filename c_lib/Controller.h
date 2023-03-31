@@ -65,7 +65,7 @@ void Controller_Set_Target_Velocity( Controller_t* p_cont, float vel );
  * Function Controller_Set_Target_Position sets the target postion for the 
  * controller, this also sets the target velocity to 0.
  */
-void Controller_Set_Target_Position( Controller_t* p_cont, float vel );
+void Controller_Set_Target_Position( Controller_t* p_cont, float pos );
 
 /**
  * Function Controller_Update takes in a new measurement and returns the

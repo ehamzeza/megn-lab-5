@@ -15,9 +15,9 @@ void Controller_Set_Target_Velocity( Controller_t* p_cont, float vel )
     p_cont->target_vel = vel;
 }
 
-void Controller_Set_Target_Position( Controller_t* p_cont, float vel )
+void Controller_Set_Target_Position( Controller_t* p_cont, float pos )
 {
-    p_cont->target_pos = vel;
+    p_cont->target_pos = pos;
     p_cont->target_vel = 0.0f;
 }
 
