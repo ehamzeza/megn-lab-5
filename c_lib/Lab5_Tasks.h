@@ -36,6 +36,7 @@
 #define LAB5_TASKS_H
 
 #include "Task_Management.h"
+#include "Skid_Steer_Controller.h"
 
 // Include your lab-specific headers here
 // e.g. #include "SerialIO.h"  // necessary for sending arithmatic results back to user
@@ -46,5 +47,10 @@
 // Put your lab-specific task functionality and data_structures (if necessary) here so it is accessable to both
 // message handeling and the Lab main loops.
 // e.g. void Send_Time_Now( float _time_since_last );
+
+Task_t task_control_loop;
+Skid_Steer_Controller_t car_controller;
+
+void Task_Control_Loop(float time_since_last);
 
 #endif  // ifndef LAB5_TASKS_H

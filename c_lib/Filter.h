@@ -35,8 +35,8 @@
  * This code leverages the Ring_Buffer code developed in the homework.
  *
  */
-// #ifndef _MEGN540_FILTER_H
-// #define _MEGN540_FILTER_H
+#ifndef _MEGN540_FILTER_H
+#define _MEGN540_FILTER_H
 
 // #ifndef RB_LENGTH_F
 // #    define RB_LENGTH_F 8  // must be a power of 2 (max of 256) and larger than the filter order +1.
@@ -101,3 +101,5 @@ float Filter_Value( Filter_Data_t* p_filt, float value );
  * @return The latest filtered value
  */
 float Filter_Last_Output( Filter_Data_t* p_filt );
+
+#endif

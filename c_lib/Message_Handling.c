@@ -408,6 +408,23 @@ void Task_Message_Handling( float _time_since_last )
                 command_processed = true;
             }
             break;
+        
+        case 'd':
+            if (USB_Msg_Length() >= _Message_Length('d')) {
+                USB_Msg_Get();
+
+                struct __attribute__ ((__packed__)) {
+                    float linear;
+                    float angular;
+                } data;
+
+                USB_Msg_Read_Into(&data, sizeof(data));
+
+                Skid_Steer_Command_Displacement(&car_controller, data.linear, data.angular);
+
+                command_processed = true;
+            }
+            break;
 
         default:
             // What to do if you dont recognize the command character
