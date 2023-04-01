@@ -164,7 +164,7 @@ Discarded input sections
  .data          0x0000000000000000        0x0 ../libMEGN540-atmega32u4.a(Filter.c.obj)
  .bss           0x0000000000000000        0x0 ../libMEGN540-atmega32u4.a(Filter.c.obj)
  .text.Filter_ShiftBy
-                0x0000000000000000       0x8e ../libMEGN540-atmega32u4.a(Filter.c.obj)
+                0x0000000000000000       0x98 ../libMEGN540-atmega32u4.a(Filter.c.obj)
  .text          0x0000000000000000        0x0 ../libMEGN540-atmega32u4.a(Lab2_Tasks.c.obj)
  .data          0x0000000000000000        0x0 ../libMEGN540-atmega32u4.a(Lab2_Tasks.c.obj)
  .text          0x0000000000000000        0x0 ../libMEGN540-atmega32u4.a(Lab3_Tasks.c.obj)
@@ -186,10 +186,10 @@ Discarded input sections
  .bss           0x0000000000000000        0x0 ../libMEGN540-atmega32u4.a(Ring_Buffer.c.obj)
  .text.rb_push_front_B
                 0x0000000000000000       0x26 ../libMEGN540-atmega32u4.a(Ring_Buffer.c.obj)
- .text.rb_pop_back_F
-                0x0000000000000000       0x2c ../libMEGN540-atmega32u4.a(Ring_Buffer.c.obj)
  .text.rb_pop_back_B
                 0x0000000000000000       0x24 ../libMEGN540-atmega32u4.a(Ring_Buffer.c.obj)
+ .text.rb_pop_front_F
+                0x0000000000000000       0x42 ../libMEGN540-atmega32u4.a(Ring_Buffer.c.obj)
  .text.rb_set_B
                 0x0000000000000000       0x12 ../libMEGN540-atmega32u4.a(Ring_Buffer.c.obj)
  .rodata.str1.1
@@ -205,13 +205,11 @@ Discarded input sections
  .data          0x0000000000000000        0x0 ../libMEGN540-atmega32u4.a(Skid_Steer_Controller.c.obj)
  .bss           0x0000000000000000        0x0 ../libMEGN540-atmega32u4.a(Skid_Steer_Controller.c.obj)
  .text.Initialize_Skid_Steer
-                0x0000000000000000      0x110 ../libMEGN540-atmega32u4.a(Skid_Steer_Controller.c.obj)
+                0x0000000000000000      0x10a ../libMEGN540-atmega32u4.a(Skid_Steer_Controller.c.obj)
  .text.Skid_Steer_Command_Velocity
                 0x0000000000000000        0x2 ../libMEGN540-atmega32u4.a(Skid_Steer_Controller.c.obj)
- .rodata.str1.1
-                0x0000000000000000        0x3 ../libMEGN540-atmega32u4.a(Skid_Steer_Controller.c.obj)
  .text.Skid_Steer_Control_Update
-                0x0000000000000000      0x1e8 ../libMEGN540-atmega32u4.a(Skid_Steer_Controller.c.obj)
+                0x0000000000000000       0x9c ../libMEGN540-atmega32u4.a(Skid_Steer_Controller.c.obj)
  .text          0x0000000000000000        0x0 ../libMEGN540-atmega32u4.a(Task_Management.c.obj)
  .data          0x0000000000000000        0x0 ../libMEGN540-atmega32u4.a(Task_Management.c.obj)
  .bss           0x0000000000000000        0x0 ../libMEGN540-atmega32u4.a(Task_Management.c.obj)
@@ -225,13 +223,13 @@ Discarded input sections
  .data          0x0000000000000000        0x0 ../libMEGN540-atmega32u4.a(Controller.c.obj)
  .bss           0x0000000000000000        0x0 ../libMEGN540-atmega32u4.a(Controller.c.obj)
  .text.Initialize_Controller
-                0x0000000000000000       0x58 ../libMEGN540-atmega32u4.a(Controller.c.obj)
+                0x0000000000000000       0x6c ../libMEGN540-atmega32u4.a(Controller.c.obj)
  .text.Controller_Set_Target_Velocity
                 0x0000000000000000       0x10 ../libMEGN540-atmega32u4.a(Controller.c.obj)
  .text.Controller_Set_Target_Position
                 0x0000000000000000       0x1a ../libMEGN540-atmega32u4.a(Controller.c.obj)
  .text.Controller_Update
-                0x0000000000000000       0xd0 ../libMEGN540-atmega32u4.a(Controller.c.obj)
+                0x0000000000000000       0x82 ../libMEGN540-atmega32u4.a(Controller.c.obj)
  .text.Controller_Last
                 0x0000000000000000        0x4 ../libMEGN540-atmega32u4.a(Controller.c.obj)
  .text.Controller_SetTo
@@ -651,7 +649,7 @@ END GROUP
 .rela.plt
  *(.rela.plt)
 
-.text           0x0000000000000000     0x23e8
+.text           0x0000000000000000     0x23e6
  *(.vectors)
  .vectors       0x0000000000000000       0xac /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr5/crtatmega32u4.o
                 0x0000000000000000                __vectors
@@ -797,303 +795,303 @@ END GROUP
                 0x000000000000057a       0xac ../libMEGN540-atmega32u4.a(Encoder.c.obj)
                 0x000000000000057a                __vector_7
  .text.Filter_Init
-                0x0000000000000626       0xbc ../libMEGN540-atmega32u4.a(Filter.c.obj)
+                0x0000000000000626       0xc4 ../libMEGN540-atmega32u4.a(Filter.c.obj)
                 0x0000000000000626                Filter_Init
  .text.Filter_SetTo
-                0x00000000000006e2       0x64 ../libMEGN540-atmega32u4.a(Filter.c.obj)
-                0x00000000000006e2                Filter_SetTo
+                0x00000000000006ea       0x68 ../libMEGN540-atmega32u4.a(Filter.c.obj)
+                0x00000000000006ea                Filter_SetTo
  .text.Filter_Value
-                0x0000000000000746      0x148 ../libMEGN540-atmega32u4.a(Filter.c.obj)
-                0x0000000000000746                Filter_Value
+                0x0000000000000752      0x14e ../libMEGN540-atmega32u4.a(Filter.c.obj)
+                0x0000000000000752                Filter_Value
  .text.Filter_Last_Output
-                0x000000000000088e        0x6 ../libMEGN540-atmega32u4.a(Filter.c.obj)
-                0x000000000000088e                Filter_Last_Output
+                0x00000000000008a0        0x8 ../libMEGN540-atmega32u4.a(Filter.c.obj)
+                0x00000000000008a0                Filter_Last_Output
  .text.Send_Loop_Time
-                0x0000000000000894       0xe4 ../libMEGN540-atmega32u4.a(Lab2_Tasks.c.obj)
-                0x0000000000000894                Send_Loop_Time
+                0x00000000000008a8       0xe4 ../libMEGN540-atmega32u4.a(Lab2_Tasks.c.obj)
+                0x00000000000008a8                Send_Loop_Time
  .text.Send_Time_Now
-                0x0000000000000978       0x3c ../libMEGN540-atmega32u4.a(Lab2_Tasks.c.obj)
-                0x0000000000000978                Send_Time_Now
+                0x000000000000098c       0x3c ../libMEGN540-atmega32u4.a(Lab2_Tasks.c.obj)
+                0x000000000000098c                Send_Time_Now
  .text.Send_Encoder_Count
-                0x00000000000009b4       0x4a ../libMEGN540-atmega32u4.a(Lab3_Tasks.c.obj)
-                0x00000000000009b4                Send_Encoder_Count
+                0x00000000000009c8       0x4a ../libMEGN540-atmega32u4.a(Lab3_Tasks.c.obj)
+                0x00000000000009c8                Send_Encoder_Count
  .text.Send_Battery_Voltage
-                0x00000000000009fe       0x34 ../libMEGN540-atmega32u4.a(Lab3_Tasks.c.obj)
-                0x00000000000009fe                Send_Battery_Voltage
+                0x0000000000000a12       0x34 ../libMEGN540-atmega32u4.a(Lab3_Tasks.c.obj)
+                0x0000000000000a12                Send_Battery_Voltage
  .text.Battery_Monitoring
-                0x0000000000000a32       0xb4 ../libMEGN540-atmega32u4.a(Lab3_Tasks.c.obj)
-                0x0000000000000a32                Battery_Monitoring
+                0x0000000000000a46       0xb4 ../libMEGN540-atmega32u4.a(Lab3_Tasks.c.obj)
+                0x0000000000000a46                Battery_Monitoring
  .text.Task_Message_Handling
-                0x0000000000000ae6      0x3ac ../libMEGN540-atmega32u4.a(Message_Handling.c.obj)
-                0x0000000000000ae6                Task_Message_Handling
+                0x0000000000000afa      0x3ac ../libMEGN540-atmega32u4.a(Message_Handling.c.obj)
+                0x0000000000000afa                Task_Message_Handling
  .text.Task_Message_Handling_Watchdog
-                0x0000000000000e92        0x2 ../libMEGN540-atmega32u4.a(Message_Handling.c.obj)
-                0x0000000000000e92                Task_Message_Handling_Watchdog
+                0x0000000000000ea6        0x2 ../libMEGN540-atmega32u4.a(Message_Handling.c.obj)
+                0x0000000000000ea6                Task_Message_Handling_Watchdog
  .text.MotorPWM_Enable
-                0x0000000000000e94       0x18 ../libMEGN540-atmega32u4.a(MotorPWM.c.obj)
-                0x0000000000000e94                MotorPWM_Enable
+                0x0000000000000ea8       0x18 ../libMEGN540-atmega32u4.a(MotorPWM.c.obj)
+                0x0000000000000ea8                MotorPWM_Enable
  .text.MotorPWM_Is_Enabled
-                0x0000000000000eac        0x8 ../libMEGN540-atmega32u4.a(MotorPWM.c.obj)
-                0x0000000000000eac                MotorPWM_Is_Enabled
+                0x0000000000000ec0        0x8 ../libMEGN540-atmega32u4.a(MotorPWM.c.obj)
+                0x0000000000000ec0                MotorPWM_Is_Enabled
  .text.MotorPWM_Set_Left
-                0x0000000000000eb4       0x3e ../libMEGN540-atmega32u4.a(MotorPWM.c.obj)
-                0x0000000000000eb4                MotorPWM_Set_Left
+                0x0000000000000ec8       0x3e ../libMEGN540-atmega32u4.a(MotorPWM.c.obj)
+                0x0000000000000ec8                MotorPWM_Set_Left
  .text.MotorPWM_Set_Right
-                0x0000000000000ef2       0x2e ../libMEGN540-atmega32u4.a(MotorPWM.c.obj)
-                0x0000000000000ef2                MotorPWM_Set_Right
+                0x0000000000000f06       0x2e ../libMEGN540-atmega32u4.a(MotorPWM.c.obj)
+                0x0000000000000f06                MotorPWM_Set_Right
  .text.MotorPWM_Get_Left
-                0x0000000000000f20       0x1e ../libMEGN540-atmega32u4.a(MotorPWM.c.obj)
-                0x0000000000000f20                MotorPWM_Get_Left
+                0x0000000000000f34       0x1e ../libMEGN540-atmega32u4.a(MotorPWM.c.obj)
+                0x0000000000000f34                MotorPWM_Get_Left
  .text.MotorPWM_Get_Right
-                0x0000000000000f3e       0x1e ../libMEGN540-atmega32u4.a(MotorPWM.c.obj)
-                0x0000000000000f3e                MotorPWM_Get_Right
+                0x0000000000000f52       0x1e ../libMEGN540-atmega32u4.a(MotorPWM.c.obj)
+                0x0000000000000f52                MotorPWM_Get_Right
  .text.rb_initialize_F
-                0x0000000000000f5c        0x8 ../libMEGN540-atmega32u4.a(Ring_Buffer.c.obj)
-                0x0000000000000f5c                rb_initialize_F
+                0x0000000000000f70        0x8 ../libMEGN540-atmega32u4.a(Ring_Buffer.c.obj)
+                0x0000000000000f70                rb_initialize_F
  .text.rb_initialize_B
-                0x0000000000000f64        0xc ../libMEGN540-atmega32u4.a(Ring_Buffer.c.obj)
-                0x0000000000000f64                rb_initialize_B
+                0x0000000000000f78        0xc ../libMEGN540-atmega32u4.a(Ring_Buffer.c.obj)
+                0x0000000000000f78                rb_initialize_B
  .text.rb_length_F
-                0x0000000000000f70        0xe ../libMEGN540-atmega32u4.a(Ring_Buffer.c.obj)
-                0x0000000000000f70                rb_length_F
+                0x0000000000000f84        0xe ../libMEGN540-atmega32u4.a(Ring_Buffer.c.obj)
+                0x0000000000000f84                rb_length_F
  .text.rb_length_B
-                0x0000000000000f7e       0x12 ../libMEGN540-atmega32u4.a(Ring_Buffer.c.obj)
-                0x0000000000000f7e                rb_length_B
+                0x0000000000000f92       0x12 ../libMEGN540-atmega32u4.a(Ring_Buffer.c.obj)
+                0x0000000000000f92                rb_length_B
  .text.rb_push_back_F
-                0x0000000000000f90       0x2e ../libMEGN540-atmega32u4.a(Ring_Buffer.c.obj)
-                0x0000000000000f90                rb_push_back_F
+                0x0000000000000fa4       0x2e ../libMEGN540-atmega32u4.a(Ring_Buffer.c.obj)
+                0x0000000000000fa4                rb_push_back_F
  .text.rb_push_back_B
-                0x0000000000000fbe       0x24 ../libMEGN540-atmega32u4.a(Ring_Buffer.c.obj)
-                0x0000000000000fbe                rb_push_back_B
+                0x0000000000000fd2       0x24 ../libMEGN540-atmega32u4.a(Ring_Buffer.c.obj)
+                0x0000000000000fd2                rb_push_back_B
  .text.rb_push_front_F
-                0x0000000000000fe2       0x2e ../libMEGN540-atmega32u4.a(Ring_Buffer.c.obj)
-                0x0000000000000fe2                rb_push_front_F
- .text.rb_pop_front_F
-                0x0000000000001010       0x42 ../libMEGN540-atmega32u4.a(Ring_Buffer.c.obj)
-                0x0000000000001010                rb_pop_front_F
+                0x0000000000000ff6       0x2e ../libMEGN540-atmega32u4.a(Ring_Buffer.c.obj)
+                0x0000000000000ff6                rb_push_front_F
+ .text.rb_pop_back_F
+                0x0000000000001024       0x2c ../libMEGN540-atmega32u4.a(Ring_Buffer.c.obj)
+                0x0000000000001024                rb_pop_back_F
  .text.rb_pop_front_B
-                0x0000000000001052       0x26 ../libMEGN540-atmega32u4.a(Ring_Buffer.c.obj)
-                0x0000000000001052                rb_pop_front_B
+                0x0000000000001050       0x26 ../libMEGN540-atmega32u4.a(Ring_Buffer.c.obj)
+                0x0000000000001050                rb_pop_front_B
  .text.rb_get_F
-                0x0000000000001078       0x1c ../libMEGN540-atmega32u4.a(Ring_Buffer.c.obj)
-                0x0000000000001078                rb_get_F
+                0x0000000000001076       0x1c ../libMEGN540-atmega32u4.a(Ring_Buffer.c.obj)
+                0x0000000000001076                rb_get_F
  .text.rb_get_B
-                0x0000000000001094       0x12 ../libMEGN540-atmega32u4.a(Ring_Buffer.c.obj)
-                0x0000000000001094                rb_get_B
+                0x0000000000001092       0x12 ../libMEGN540-atmega32u4.a(Ring_Buffer.c.obj)
+                0x0000000000001092                rb_get_B
  .text.rb_set_F
-                0x00000000000010a6       0x1c ../libMEGN540-atmega32u4.a(Ring_Buffer.c.obj)
-                0x00000000000010a6                rb_set_F
+                0x00000000000010a4       0x1c ../libMEGN540-atmega32u4.a(Ring_Buffer.c.obj)
+                0x00000000000010a4                rb_set_F
  .text.Task_USB_Upkeep
-                0x00000000000010c2       0x9c ../libMEGN540-atmega32u4.a(SerialIO.c.obj)
-                0x00000000000010c2                Task_USB_Upkeep
+                0x00000000000010c0       0x9c ../libMEGN540-atmega32u4.a(SerialIO.c.obj)
+                0x00000000000010c0                Task_USB_Upkeep
  .text.USB_Send_Byte
-                0x000000000000115e        0x8 ../libMEGN540-atmega32u4.a(SerialIO.c.obj)
-                0x000000000000115e                USB_Send_Byte
+                0x000000000000115c        0x8 ../libMEGN540-atmega32u4.a(SerialIO.c.obj)
+                0x000000000000115c                USB_Send_Byte
  .text.USB_Send_Data
-                0x0000000000001166       0x26 ../libMEGN540-atmega32u4.a(SerialIO.c.obj)
-                0x0000000000001166                USB_Send_Data
+                0x0000000000001164       0x26 ../libMEGN540-atmega32u4.a(SerialIO.c.obj)
+                0x0000000000001164                USB_Send_Data
  .text.USB_Send_Str
-                0x000000000000118c       0x30 ../libMEGN540-atmega32u4.a(SerialIO.c.obj)
-                0x000000000000118c                USB_Send_Str
+                0x000000000000118a       0x30 ../libMEGN540-atmega32u4.a(SerialIO.c.obj)
+                0x000000000000118a                USB_Send_Str
  .text.USB_Send_Msg
-                0x00000000000011bc       0x44 ../libMEGN540-atmega32u4.a(SerialIO.c.obj)
-                0x00000000000011bc                USB_Send_Msg
+                0x00000000000011ba       0x44 ../libMEGN540-atmega32u4.a(SerialIO.c.obj)
+                0x00000000000011ba                USB_Send_Msg
  .text.USB_Msg_Length
-                0x0000000000001200        0x6 ../libMEGN540-atmega32u4.a(SerialIO.c.obj)
-                0x0000000000001200                USB_Msg_Length
+                0x00000000000011fe        0x6 ../libMEGN540-atmega32u4.a(SerialIO.c.obj)
+                0x00000000000011fe                USB_Msg_Length
  .text.USB_Msg_Peek
-                0x0000000000001206       0x18 ../libMEGN540-atmega32u4.a(SerialIO.c.obj)
-                0x0000000000001206                USB_Msg_Peek
+                0x0000000000001204       0x18 ../libMEGN540-atmega32u4.a(SerialIO.c.obj)
+                0x0000000000001204                USB_Msg_Peek
  .text.USB_Msg_Get
-                0x000000000000121e       0x14 ../libMEGN540-atmega32u4.a(SerialIO.c.obj)
-                0x000000000000121e                USB_Msg_Get
+                0x000000000000121c       0x14 ../libMEGN540-atmega32u4.a(SerialIO.c.obj)
+                0x000000000000121c                USB_Msg_Get
  .text.USB_Msg_Read_Into
-                0x0000000000001232       0x48 ../libMEGN540-atmega32u4.a(SerialIO.c.obj)
-                0x0000000000001232                USB_Msg_Read_Into
+                0x0000000000001230       0x48 ../libMEGN540-atmega32u4.a(SerialIO.c.obj)
+                0x0000000000001230                USB_Msg_Read_Into
  .text.USB_Flush_Input_Buffer
-                0x000000000000127a       0x16 ../libMEGN540-atmega32u4.a(SerialIO.c.obj)
-                0x000000000000127a                USB_Flush_Input_Buffer
+                0x0000000000001278       0x16 ../libMEGN540-atmega32u4.a(SerialIO.c.obj)
+                0x0000000000001278                USB_Flush_Input_Buffer
  .text.Initialize_USB
-                0x0000000000001290       0x40 ../libMEGN540-atmega32u4.a(SerialIO.c.obj)
-                0x0000000000001290                Initialize_USB
+                0x000000000000128e       0x40 ../libMEGN540-atmega32u4.a(SerialIO.c.obj)
+                0x000000000000128e                Initialize_USB
  .text.EVENT_USB_Device_Connect
-                0x00000000000012d0        0x2 ../libMEGN540-atmega32u4.a(SerialIO.c.obj)
-                0x00000000000012d0                EVENT_USB_Device_Connect
+                0x00000000000012ce        0x2 ../libMEGN540-atmega32u4.a(SerialIO.c.obj)
+                0x00000000000012ce                EVENT_USB_Device_Connect
  .text.EVENT_USB_Device_Disconnect
-                0x00000000000012d2        0x2 ../libMEGN540-atmega32u4.a(SerialIO.c.obj)
-                0x00000000000012d2                EVENT_USB_Device_Disconnect
+                0x00000000000012d0        0x2 ../libMEGN540-atmega32u4.a(SerialIO.c.obj)
+                0x00000000000012d0                EVENT_USB_Device_Disconnect
  .text.EVENT_USB_Device_ConfigurationChanged
-                0x00000000000012d4       0x2a ../libMEGN540-atmega32u4.a(SerialIO.c.obj)
-                0x00000000000012d4                EVENT_USB_Device_ConfigurationChanged
+                0x00000000000012d2       0x2a ../libMEGN540-atmega32u4.a(SerialIO.c.obj)
+                0x00000000000012d2                EVENT_USB_Device_ConfigurationChanged
  .text.EVENT_USB_Device_ControlRequest
-                0x00000000000012fe       0x74 ../libMEGN540-atmega32u4.a(SerialIO.c.obj)
-                0x00000000000012fe                EVENT_USB_Device_ControlRequest
+                0x00000000000012fc       0x74 ../libMEGN540-atmega32u4.a(SerialIO.c.obj)
+                0x00000000000012fc                EVENT_USB_Device_ControlRequest
  .text.Skid_Steer_Command_Displacement
-                0x0000000000001372       0x56 ../libMEGN540-atmega32u4.a(Skid_Steer_Controller.c.obj)
-                0x0000000000001372                Skid_Steer_Command_Displacement
+                0x0000000000001370       0x56 ../libMEGN540-atmega32u4.a(Skid_Steer_Controller.c.obj)
+                0x0000000000001370                Skid_Steer_Command_Displacement
  .text.Initialize_Task
-                0x00000000000013c8       0x1e ../libMEGN540-atmega32u4.a(Task_Management.c.obj)
-                0x00000000000013c8                Initialize_Task
+                0x00000000000013c6       0x1e ../libMEGN540-atmega32u4.a(Task_Management.c.obj)
+                0x00000000000013c6                Initialize_Task
  .text.Task_Activate
-                0x00000000000013e6       0x20 ../libMEGN540-atmega32u4.a(Task_Management.c.obj)
-                0x00000000000013e6                Task_Activate
+                0x00000000000013e4       0x20 ../libMEGN540-atmega32u4.a(Task_Management.c.obj)
+                0x00000000000013e4                Task_Activate
  .text.Task_Is_Ready
-                0x0000000000001406       0x3a ../libMEGN540-atmega32u4.a(Task_Management.c.obj)
-                0x0000000000001406                Task_Is_Ready
+                0x0000000000001404       0x3a ../libMEGN540-atmega32u4.a(Task_Management.c.obj)
+                0x0000000000001404                Task_Is_Ready
  .text.Task_Run_If_Ready
-                0x0000000000001440       0x96 ../libMEGN540-atmega32u4.a(Task_Management.c.obj)
-                0x0000000000001440                Task_Run_If_Ready
+                0x000000000000143e       0x96 ../libMEGN540-atmega32u4.a(Task_Management.c.obj)
+                0x000000000000143e                Task_Run_If_Ready
  .text.Initialize_Timing
-                0x00000000000014d6       0x2e ../libMEGN540-atmega32u4.a(Timing.c.obj)
-                0x00000000000014d6                Initialize_Timing
+                0x00000000000014d4       0x2e ../libMEGN540-atmega32u4.a(Timing.c.obj)
+                0x00000000000014d4                Initialize_Timing
  .text.Timing_Get_Time_Sec
-                0x0000000000001504       0x6e ../libMEGN540-atmega32u4.a(Timing.c.obj)
-                0x0000000000001504                Timing_Get_Time_Sec
+                0x0000000000001502       0x6e ../libMEGN540-atmega32u4.a(Timing.c.obj)
+                0x0000000000001502                Timing_Get_Time_Sec
  .text.Timing_Get_Milli
-                0x0000000000001572       0x12 ../libMEGN540-atmega32u4.a(Timing.c.obj)
-                0x0000000000001572                Timing_Get_Milli
+                0x0000000000001570       0x12 ../libMEGN540-atmega32u4.a(Timing.c.obj)
+                0x0000000000001570                Timing_Get_Milli
  .text.Timing_Get_Micro
-                0x0000000000001584        0xc ../libMEGN540-atmega32u4.a(Timing.c.obj)
-                0x0000000000001584                Timing_Get_Micro
+                0x0000000000001582        0xc ../libMEGN540-atmega32u4.a(Timing.c.obj)
+                0x0000000000001582                Timing_Get_Micro
  .text.Timing_Seconds_Since
-                0x0000000000001590       0x32 ../libMEGN540-atmega32u4.a(Timing.c.obj)
-                0x0000000000001590                Timing_Seconds_Since
+                0x000000000000158e       0x32 ../libMEGN540-atmega32u4.a(Timing.c.obj)
+                0x000000000000158e                Timing_Seconds_Since
  .text.__vector_21
-                0x00000000000015c2       0x4c ../libMEGN540-atmega32u4.a(Timing.c.obj)
-                0x00000000000015c2                __vector_21
+                0x00000000000015c0       0x4c ../libMEGN540-atmega32u4.a(Timing.c.obj)
+                0x00000000000015c0                __vector_21
  .text.Multiply_And_Send
-                0x000000000000160e       0x34 ../libMEGN540-atmega32u4.a(Lab1_Tasks.c.obj)
-                0x000000000000160e                Multiply_And_Send
+                0x000000000000160c       0x34 ../libMEGN540-atmega32u4.a(Lab1_Tasks.c.obj)
+                0x000000000000160c                Multiply_And_Send
  .text.Divide_And_Send
-                0x0000000000001642       0x34 ../libMEGN540-atmega32u4.a(Lab1_Tasks.c.obj)
-                0x0000000000001642                Divide_And_Send
+                0x0000000000001640       0x34 ../libMEGN540-atmega32u4.a(Lab1_Tasks.c.obj)
+                0x0000000000001640                Divide_And_Send
  .text.Add_And_Send
-                0x0000000000001676       0x34 ../libMEGN540-atmega32u4.a(Lab1_Tasks.c.obj)
-                0x0000000000001676                Add_And_Send
+                0x0000000000001674       0x34 ../libMEGN540-atmega32u4.a(Lab1_Tasks.c.obj)
+                0x0000000000001674                Add_And_Send
  .text.Subtract_And_Send
-                0x00000000000016aa       0x34 ../libMEGN540-atmega32u4.a(Lab1_Tasks.c.obj)
-                0x00000000000016aa                Subtract_And_Send
+                0x00000000000016a8       0x34 ../libMEGN540-atmega32u4.a(Lab1_Tasks.c.obj)
+                0x00000000000016a8                Subtract_And_Send
  .text.USB_ResetInterface
-                0x00000000000016de       0x80 ../libLUFA_USB-atmega32u4.a(USBController_AVR8.c.obj)
-                0x00000000000016de                USB_ResetInterface
+                0x00000000000016dc       0x80 ../libLUFA_USB-atmega32u4.a(USBController_AVR8.c.obj)
+                0x00000000000016dc                USB_ResetInterface
  .text.USB_Init
-                0x000000000000175e       0x20 ../libLUFA_USB-atmega32u4.a(USBController_AVR8.c.obj)
-                0x000000000000175e                USB_Init
+                0x000000000000175c       0x20 ../libLUFA_USB-atmega32u4.a(USBController_AVR8.c.obj)
+                0x000000000000175c                USB_Init
  .text.USB_INT_DisableAllInterrupts
-                0x000000000000177e       0x10 ../libLUFA_USB-atmega32u4.a(USBInterrupt_AVR8.c.obj)
-                0x000000000000177e                USB_INT_DisableAllInterrupts
+                0x000000000000177c       0x10 ../libLUFA_USB-atmega32u4.a(USBInterrupt_AVR8.c.obj)
+                0x000000000000177c                USB_INT_DisableAllInterrupts
  .text.USB_INT_ClearAllInterrupts
-                0x000000000000178e        0xa ../libLUFA_USB-atmega32u4.a(USBInterrupt_AVR8.c.obj)
-                0x000000000000178e                USB_INT_ClearAllInterrupts
+                0x000000000000178c        0xa ../libLUFA_USB-atmega32u4.a(USBInterrupt_AVR8.c.obj)
+                0x000000000000178c                USB_INT_ClearAllInterrupts
  .text.__vector_10
-                0x0000000000001798      0x196 ../libLUFA_USB-atmega32u4.a(USBInterrupt_AVR8.c.obj)
-                0x0000000000001798                __vector_10
+                0x0000000000001796      0x196 ../libLUFA_USB-atmega32u4.a(USBInterrupt_AVR8.c.obj)
+                0x0000000000001796                __vector_10
  .text.__vector_11
-                0x000000000000192e       0x86 ../libLUFA_USB-atmega32u4.a(USBInterrupt_AVR8.c.obj)
-                0x000000000000192e                __vector_11
+                0x000000000000192c       0x86 ../libLUFA_USB-atmega32u4.a(USBInterrupt_AVR8.c.obj)
+                0x000000000000192c                __vector_11
  .text.USB_Event_Stub
-                0x00000000000019b4        0x2 ../libLUFA_USB-atmega32u4.a(Events.c.obj)
-                0x00000000000019b4                EVENT_USB_Device_WakeUp
-                0x00000000000019b4                USB_Event_Stub
-                0x00000000000019b4                EVENT_USB_Device_Suspend
-                0x00000000000019b4                EVENT_USB_Device_StartOfFrame
-                0x00000000000019b4                EVENT_USB_Device_Reset
+                0x00000000000019b2        0x2 ../libLUFA_USB-atmega32u4.a(Events.c.obj)
+                0x00000000000019b2                EVENT_USB_Device_WakeUp
+                0x00000000000019b2                USB_Event_Stub
+                0x00000000000019b2                EVENT_USB_Device_Suspend
+                0x00000000000019b2                EVENT_USB_Device_StartOfFrame
+                0x00000000000019b2                EVENT_USB_Device_Reset
  .text.USB_USBTask
-                0x00000000000019b6       0x34 ../libLUFA_USB-atmega32u4.a(USBTask.c.obj)
-                0x00000000000019b6                USB_USBTask
+                0x00000000000019b4       0x34 ../libLUFA_USB-atmega32u4.a(USBTask.c.obj)
+                0x00000000000019b4                USB_USBTask
  .text.Endpoint_ConfigureEndpoint_Prv
-                0x00000000000019ea       0x6a ../libLUFA_USB-atmega32u4.a(Endpoint_AVR8.c.obj)
-                0x00000000000019ea                Endpoint_ConfigureEndpoint_Prv
+                0x00000000000019e8       0x6a ../libLUFA_USB-atmega32u4.a(Endpoint_AVR8.c.obj)
+                0x00000000000019e8                Endpoint_ConfigureEndpoint_Prv
  .text.Endpoint_ClearStatusStage
-                0x0000000000001a54       0x3e ../libLUFA_USB-atmega32u4.a(Endpoint_AVR8.c.obj)
-                0x0000000000001a54                Endpoint_ClearStatusStage
+                0x0000000000001a52       0x3e ../libLUFA_USB-atmega32u4.a(Endpoint_AVR8.c.obj)
+                0x0000000000001a52                Endpoint_ClearStatusStage
  .text.Endpoint_WaitUntilReady
-                0x0000000000001a92       0x66 ../libLUFA_USB-atmega32u4.a(Endpoint_AVR8.c.obj)
-                0x0000000000001a92                Endpoint_WaitUntilReady
+                0x0000000000001a90       0x66 ../libLUFA_USB-atmega32u4.a(Endpoint_AVR8.c.obj)
+                0x0000000000001a90                Endpoint_WaitUntilReady
  .text.Endpoint_Write_Control_Stream_LE
-                0x0000000000001af8       0xbc ../libLUFA_USB-atmega32u4.a(EndpointStream_AVR8.c.obj)
-                0x0000000000001af8                Endpoint_Write_Control_Stream_LE
+                0x0000000000001af6       0xbc ../libLUFA_USB-atmega32u4.a(EndpointStream_AVR8.c.obj)
+                0x0000000000001af6                Endpoint_Write_Control_Stream_LE
  .text.Endpoint_Read_Control_Stream_LE
-                0x0000000000001bb4       0x80 ../libLUFA_USB-atmega32u4.a(EndpointStream_AVR8.c.obj)
-                0x0000000000001bb4                Endpoint_Read_Control_Stream_LE
+                0x0000000000001bb2       0x80 ../libLUFA_USB-atmega32u4.a(EndpointStream_AVR8.c.obj)
+                0x0000000000001bb2                Endpoint_Read_Control_Stream_LE
  .text.Endpoint_Write_Control_PStream_LE
-                0x0000000000001c34       0xc2 ../libLUFA_USB-atmega32u4.a(EndpointStream_AVR8.c.obj)
-                0x0000000000001c34                Endpoint_Write_Control_PStream_LE
+                0x0000000000001c32       0xc2 ../libLUFA_USB-atmega32u4.a(EndpointStream_AVR8.c.obj)
+                0x0000000000001c32                Endpoint_Write_Control_PStream_LE
  .text.USB_Device_ProcessControlRequest
-                0x0000000000001cf6      0x2ae ../libLUFA_USB-atmega32u4.a(DeviceStandardReq.c.obj)
-                0x0000000000001cf6                USB_Device_ProcessControlRequest
+                0x0000000000001cf4      0x2ae ../libLUFA_USB-atmega32u4.a(DeviceStandardReq.c.obj)
+                0x0000000000001cf4                USB_Device_ProcessControlRequest
  .text.CALLBACK_USB_GetDescriptor
-                0x0000000000001fa4       0x60 ../libLUFA_USB-atmega32u4.a(Descriptors.c.obj)
-                0x0000000000001fa4                CALLBACK_USB_GetDescriptor
- .text.libgcc   0x0000000000002004        0xc /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_tablejump2.o)
-                0x0000000000002004                __tablejump2__
+                0x0000000000001fa2       0x60 ../libLUFA_USB-atmega32u4.a(Descriptors.c.obj)
+                0x0000000000001fa2                CALLBACK_USB_GetDescriptor
+ .text.libgcc   0x0000000000002002        0xc /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_tablejump2.o)
+                0x0000000000002002                __tablejump2__
  .text.avr-libc.fplib
-                0x0000000000002010        0xa /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr5/libm.a(addsf3.o)
-                0x0000000000002010                __subsf3
-                0x0000000000002012                __addsf3
+                0x000000000000200e        0xa /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr5/libm.a(addsf3.o)
+                0x000000000000200e                __subsf3
+                0x0000000000002010                __addsf3
  .text.avr-libc.fplib
-                0x000000000000201a       0xc0 /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr5/libm.a(addsf3x.o)
-                0x0000000000002034                __addsf3x
+                0x0000000000002018       0xc0 /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr5/libm.a(addsf3x.o)
+                0x0000000000002032                __addsf3x
  .text.avr-libc.fplib
-                0x00000000000020da        0x8 /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr5/libm.a(cmpsf2.o)
-                0x00000000000020da                __lesf2
-                0x00000000000020da                __nesf2
-                0x00000000000020da                __eqsf2
-                0x00000000000020da                __cmpsf2
-                0x00000000000020da                __ltsf2
+                0x00000000000020d8        0x8 /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr5/libm.a(cmpsf2.o)
+                0x00000000000020d8                __lesf2
+                0x00000000000020d8                __nesf2
+                0x00000000000020d8                __eqsf2
+                0x00000000000020d8                __cmpsf2
+                0x00000000000020d8                __ltsf2
  .text.avr-libc.fplib
-                0x00000000000020e2        0x4 /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr5/libm.a(divsf3.o)
-                0x00000000000020e2                __divsf3
+                0x00000000000020e0        0x4 /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr5/libm.a(divsf3.o)
+                0x00000000000020e0                __divsf3
  .text.avr-libc.fplib
-                0x00000000000020e6       0xcc /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr5/libm.a(divsf3x.o)
-                0x00000000000020fc                __divsf3x
-                0x0000000000002100                __divsf3_pse
+                0x00000000000020e4       0xcc /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr5/libm.a(divsf3x.o)
+                0x00000000000020fa                __divsf3x
+                0x00000000000020fe                __divsf3_pse
  .text.avr-libc.fplib
-                0x00000000000021b2       0x7a /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr5/libm.a(floatsisf.o)
-                0x00000000000021b2                __floatunsisf
-                0x00000000000021b6                __floatsisf
+                0x00000000000021b0       0x7a /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr5/libm.a(floatsisf.o)
+                0x00000000000021b0                __floatunsisf
+                0x00000000000021b4                __floatsisf
  .text.avr-libc.fplib
-                0x000000000000222c       0x48 /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr5/libm.a(fp_cmp.o)
-                0x000000000000222c                __fp_cmp
+                0x000000000000222a       0x48 /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr5/libm.a(fp_cmp.o)
+                0x000000000000222a                __fp_cmp
  .text.avr-libc.fplib
-                0x0000000000002274        0xc /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr5/libm.a(fp_inf.o)
-                0x0000000000002274                __fp_inf
+                0x0000000000002272        0xc /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr5/libm.a(fp_inf.o)
+                0x0000000000002272                __fp_inf
  .text.avr-libc.fplib
-                0x0000000000002280        0x6 /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr5/libm.a(fp_nan.o)
-                0x0000000000002280                __fp_nan
+                0x000000000000227e        0x6 /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr5/libm.a(fp_nan.o)
+                0x000000000000227e                __fp_nan
  .text.avr-libc.fplib
-                0x0000000000002286        0xe /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr5/libm.a(fp_pscA.o)
-                0x0000000000002286                __fp_pscA
+                0x0000000000002284        0xe /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr5/libm.a(fp_pscA.o)
+                0x0000000000002284                __fp_pscA
  .text.avr-libc.fplib
-                0x0000000000002294        0xe /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr5/libm.a(fp_pscB.o)
-                0x0000000000002294                __fp_pscB
+                0x0000000000002292        0xe /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr5/libm.a(fp_pscB.o)
+                0x0000000000002292                __fp_pscB
  .text.avr-libc.fplib
-                0x00000000000022a2       0x22 /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr5/libm.a(fp_round.o)
-                0x00000000000022a2                __fp_round
+                0x00000000000022a0       0x22 /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr5/libm.a(fp_round.o)
+                0x00000000000022a0                __fp_round
  .text.avr-libc.fplib
-                0x00000000000022c4       0x44 /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr5/libm.a(fp_split3.o)
-                0x00000000000022c4                __fp_split3
-                0x00000000000022d4                __fp_splitA
+                0x00000000000022c2       0x44 /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr5/libm.a(fp_split3.o)
+                0x00000000000022c2                __fp_split3
+                0x00000000000022d2                __fp_splitA
  .text.avr-libc.fplib
-                0x0000000000002308        0xe /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr5/libm.a(fp_zero.o)
-                0x0000000000002308                __fp_zero
-                0x000000000000230a                __fp_szero
+                0x0000000000002306        0xe /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr5/libm.a(fp_zero.o)
+                0x0000000000002306                __fp_zero
+                0x0000000000002308                __fp_szero
  .text.avr-libc.fplib
-                0x0000000000002316        0x8 /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr5/libm.a(gesf2.o)
-                0x0000000000002316                __gtsf2
-                0x0000000000002316                __gesf2
+                0x0000000000002314        0x8 /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr5/libm.a(gesf2.o)
+                0x0000000000002314                __gtsf2
+                0x0000000000002314                __gesf2
  .text.avr-libc.fplib
-                0x000000000000231e        0x4 /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr5/libm.a(mulsf3.o)
-                0x000000000000231e                __mulsf3
+                0x000000000000231c        0x4 /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr5/libm.a(mulsf3.o)
+                0x000000000000231c                __mulsf3
  .text.avr-libc.fplib
-                0x0000000000002322       0xc2 /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr5/libm.a(mulsf3x.o)
-                0x0000000000002336                __mulsf3x
-                0x000000000000233a                __mulsf3_pse
-                0x00000000000023e4                . = ALIGN (0x2)
+                0x0000000000002320       0xc2 /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr5/libm.a(mulsf3x.o)
+                0x0000000000002334                __mulsf3x
+                0x0000000000002338                __mulsf3_pse
+                0x00000000000023e2                . = ALIGN (0x2)
  *(.fini9)
- .fini9         0x00000000000023e4        0x0 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_exit.o)
-                0x00000000000023e4                exit
-                0x00000000000023e4                _exit
+ .fini9         0x00000000000023e2        0x0 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_exit.o)
+                0x00000000000023e2                exit
+                0x00000000000023e2                _exit
  *(.fini9)
  *(.fini8)
  *(.fini8)
@@ -1112,11 +1110,11 @@ END GROUP
  *(.fini1)
  *(.fini1)
  *(.fini0)
- .fini0         0x00000000000023e4        0x4 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_exit.o)
+ .fini0         0x00000000000023e2        0x4 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_exit.o)
  *(.fini0)
-                0x00000000000023e8                _etext = .
+                0x00000000000023e6                _etext = .
 
-.data           0x0000000000800100       0x48 load address 0x00000000000023e8
+.data           0x0000000000800100       0x48 load address 0x00000000000023e6
                 0x0000000000800100                PROVIDE (__data_start, .)
  *(.data)
  .data          0x0000000000800100        0x2 ../libMEGN540-atmega32u4.a(Battery_Monitor.c.obj)
@@ -1173,8 +1171,8 @@ END GROUP
                 0x00000000008005c9                USB_Device_CurrentlySelfPowered
                 0x00000000008005ca                USB_Device_RemoteWakeupEnabled
                 0x00000000008005cb                PROVIDE (__bss_end, .)
-                0x00000000000023e8                __data_load_start = LOADADDR (.data)
-                0x0000000000002430                __data_load_end = (__data_load_start + SIZEOF (.data))
+                0x00000000000023e6                __data_load_start = LOADADDR (.data)
+                0x000000000000242e                __data_load_end = (__data_load_start + SIZEOF (.data))
 
 .noinit         0x00000000008005cb        0x0
                 [!provide]                        PROVIDE (__noinit_start, .)
