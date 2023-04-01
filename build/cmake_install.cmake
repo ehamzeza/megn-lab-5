@@ -1,4 +1,4 @@
-# Install script for directory: /u/st/by/ajgall/megn-lab-5
+# Install script for directory: /home/ehamzeza/megn-lab-5
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -32,14 +32,19 @@ if(NOT DEFINED CMAKE_CROSSCOMPILING)
   set(CMAKE_CROSSCOMPILING "TRUE")
 endif()
 
+# Set default install directory permissions.
+if(NOT DEFINED CMAKE_OBJDUMP)
+  set(CMAKE_OBJDUMP "/usr/bin/avr-objdump")
+endif()
+
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
-  include("/u/st/by/ajgall/megn-lab-5/build/Lab0-Blink/cmake_install.cmake")
-  include("/u/st/by/ajgall/megn-lab-5/build/Lab1-Serial/cmake_install.cmake")
-  include("/u/st/by/ajgall/megn-lab-5/build/Lab2-Timing/cmake_install.cmake")
-  include("/u/st/by/ajgall/megn-lab-5/build/Lab3-Encoder/cmake_install.cmake")
-  include("/u/st/by/ajgall/megn-lab-5/build/Lab4-MotorPWM/cmake_install.cmake")
-  include("/u/st/by/ajgall/megn-lab-5/build/Lab5-Control/cmake_install.cmake")
+  include("/home/ehamzeza/megn-lab-5/build/Lab0-Blink/cmake_install.cmake")
+  include("/home/ehamzeza/megn-lab-5/build/Lab1-Serial/cmake_install.cmake")
+  include("/home/ehamzeza/megn-lab-5/build/Lab2-Timing/cmake_install.cmake")
+  include("/home/ehamzeza/megn-lab-5/build/Lab3-Encoder/cmake_install.cmake")
+  include("/home/ehamzeza/megn-lab-5/build/Lab4-MotorPWM/cmake_install.cmake")
+  include("/home/ehamzeza/megn-lab-5/build/Lab5-Control/cmake_install.cmake")
 
 endif()
 
@@ -51,5 +56,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/u/st/by/ajgall/megn-lab-5/build/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/home/ehamzeza/megn-lab-5/build/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

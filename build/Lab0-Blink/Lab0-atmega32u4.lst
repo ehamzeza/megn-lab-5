@@ -391,7 +391,7 @@ Disassembly of section .text:
  2d2:	8b 35       	cpi	r24, 0x5B	; 91
  2d4:	91 05       	cpc	r25, r1
  2d6:	08 f0       	brcs	.+2      	; 0x2da <blink_morse_char+0x1a>
- 2d8:	c1 c0       	rjmp	.+386    	; 0x45c <__LOCK_REGION_LENGTH__+0x5c>
+ 2d8:	c1 c0       	rjmp	.+386    	; 0x45c <__EEPROM_REGION_LENGTH__+0x5c>
  2da:	8a 5a       	subi	r24, 0xAA	; 170
  2dc:	9f 4f       	sbci	r25, 0xFF	; 255
  2de:	fc 01       	movw	r30, r24

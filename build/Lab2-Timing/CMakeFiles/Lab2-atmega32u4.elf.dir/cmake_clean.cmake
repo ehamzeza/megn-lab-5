@@ -1,5 +1,6 @@
 file(REMOVE_RECURSE
   "CMakeFiles/Lab2-atmega32u4.elf.dir/Lab2-Timers.c.obj"
+  "CMakeFiles/Lab2-atmega32u4.elf.dir/Lab2-Timers.c.obj.d"
   "Lab2-atmega32u4.elf"
   "Lab2-atmega32u4.elf.pdb"
   "Lab2-atmega32u4.map"

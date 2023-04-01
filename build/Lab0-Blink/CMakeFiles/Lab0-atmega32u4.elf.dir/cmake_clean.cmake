@@ -1,6 +1,8 @@
 file(REMOVE_RECURSE
   "CMakeFiles/Lab0-atmega32u4.elf.dir/Lab0-blink.c.obj"
+  "CMakeFiles/Lab0-atmega32u4.elf.dir/Lab0-blink.c.obj.d"
   "CMakeFiles/Lab0-atmega32u4.elf.dir/led_interface.c.obj"
+  "CMakeFiles/Lab0-atmega32u4.elf.dir/led_interface.c.obj.d"
   "Lab0-atmega32u4.elf"
   "Lab0-atmega32u4.elf.pdb"
   "Lab0-atmega32u4.map"
