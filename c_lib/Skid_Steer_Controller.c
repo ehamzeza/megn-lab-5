@@ -23,8 +23,10 @@ void Initialize_Skid_Steer( Skid_Steer_Controller_t* p_skid_steer_cntr, float* z
 
 void Skid_Steer_Command_Displacement( Skid_Steer_Controller_t* p_skid_steer_cntr, float linear, float angular )
 {
-    p_skid_steer_cntr->controller_left.target_pos += (linear - angular * (p_skid_steer_cntr->wheel_base_width / 2.0f)) * (2.0f / wheel_diameter);
-    p_skid_steer_cntr->controller_right.target_pos += (linear + angular * (p_skid_steer_cntr->wheel_base_width / 2.0f)) * (2.0f / wheel_diameter);
+    // p_skid_steer_cntr->controller_left.target_pos += (linear - angular * (p_skid_steer_cntr->wheel_base_width / 2.0f)) * (2.0f / wheel_diameter);
+    // p_skid_steer_cntr->controller_right.target_pos += (linear + angular * (p_skid_steer_cntr->wheel_base_width / 2.0f)) * (2.0f / wheel_diameter);
+    p_skid_steer_cntr->controller_left.target_pos += 2.0 * 3.14f * 2.0f + (0 * wheel_diameter);
+    p_skid_steer_cntr->controller_right.target_pos += 2.0 * 3.14f * 2.0f;
 }
 
 void Skid_Steer_Command_Velocity( Skid_Steer_Controller_t* p_skid_steer_cntr, float linear, float angular )
@@ -51,11 +53,12 @@ void Skid_Steer_Control_Update( Skid_Steer_Controller_t* p_skid_steer_cntr, floa
     // data.right = pwm_right;
 
     // USB_Send_Msg("cff", 'i', &data, sizeof(data));
-    // struct {
-    //     float v1;
-    // } data;
-    // data.v1 = pwm_left_capped;
-    // USB_Send_Msg( "cf", 'B', &data, sizeof( data ) );
+    struct {
+        float v1;
+    } data;
+    data.v1 = current_left_rad;
+    USB_Send_Msg( "cf", 'B', &data, sizeof( data ) );
+
 
     (*p_skid_steer_cntr->control_left_fcn_ptr)( pwm_left_capped);
     (*p_skid_steer_cntr->control_right_fcn_ptr)(pwm_right_capped);

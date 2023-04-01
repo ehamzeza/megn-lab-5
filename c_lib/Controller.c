@@ -29,9 +29,9 @@ float Controller_Update( Controller_t* p_cont, float measurement, float dt )
 
     float error = p_cont->target_pos - filter_output;
     float unconstrained = p_cont->kp * error;
-    // float saturated = Saturate(unconstrained, 400);
+    float saturated = Saturate(unconstrained, 400);
 
-    return unconstrained;
+    return saturated;
 }
 
 float Controller_Last( Controller_t* p_cont)

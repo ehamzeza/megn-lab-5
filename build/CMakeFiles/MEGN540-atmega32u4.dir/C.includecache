@@ -6,19 +6,17 @@
 
 #IncludeRegexTransform: 
 
-/u/st/by/ajgall/megn-lab-5/c_lib/Controller.c
-Controller.h
-/u/st/by/ajgall/megn-lab-5/c_lib/Controller.h
+/u/st/by/ajgall/megn-lab-5/c_lib/MotorPWM.c
+MotorPWM.h
+/u/st/by/ajgall/megn-lab-5/c_lib/MotorPWM.h
 
-/u/st/by/ajgall/megn-lab-5/c_lib/Controller.h
-Filter.h
-/u/st/by/ajgall/megn-lab-5/c_lib/Filter.h
-
-/u/st/by/ajgall/megn-lab-5/c_lib/Filter.h
-Ring_Buffer.h
-/u/st/by/ajgall/megn-lab-5/c_lib/Ring_Buffer.h
-
-/u/st/by/ajgall/megn-lab-5/c_lib/Ring_Buffer.h
-stdint.h
-/u/st/by/ajgall/megn-lab-5/c_lib/stdint.h
+/u/st/by/ajgall/megn-lab-5/c_lib/MotorPWM.h
+avr/interrupt.h
+-
+avr/io.h
+-
+ctype.h
+-
+stdbool.h
+-
 

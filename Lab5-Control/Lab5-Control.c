@@ -94,7 +94,7 @@ void Initialize_Modules( float _time_not_used_ )
     Initialize_Task(&task_schedule_stop, -1, Task_Stop_Motors);
     Initialize_Task(&task_send_system_data, -1, Task_Send_System_Data);
 
-    Initialize_Task(&task_control_loop, 0.001, Task_Control_Loop); //TODO two defs of 0.001
+    Initialize_Task(&task_control_loop, 0.0019998139401797, Task_Control_Loop); //TODO two defs of 0.001
 
     // Activate tasks that should always run:
     Task_Activate( &task_message_handling ); 
