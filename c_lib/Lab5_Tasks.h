@@ -48,9 +48,12 @@
 // message handeling and the Lab main loops.
 // e.g. void Send_Time_Now( float _time_since_last );
 
-Task_t task_control_loop;
 Skid_Steer_Controller_t car_controller;
 
+Task_t task_control_loop;
+Task_t task_stop_control;
+
 void Task_Control_Loop(float time_since_last);
+void Task_Stop_Control(float _not_used);
 
 #endif  // ifndef LAB5_TASKS_H

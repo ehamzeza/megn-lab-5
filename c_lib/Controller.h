@@ -49,14 +49,29 @@ typedef struct { Filter_Data_t controller; float kp; float target_pos; float tar
 inline float Saturate( float value, float ABS_MAX )
 {
     // return (value > ABS_MAX)?ABS_MAX:(value < -ABS_MAX)?-ABS_MAX:value;
-
     if (value < -ABS_MAX)
         return -ABS_MAX;
     
     if (value > ABS_MAX)
         return ABS_MAX;
 
-    return value;
+    if (value > 0) {
+        if (value < 5)
+            return value;
+        
+        if (value < 100)
+            return 100;
+
+        return value;
+    } else {
+        if (value > -5)
+            return value;
+        
+        if (value > -100)
+            return -100;
+
+        return value;
+    }
 }
 
 /**

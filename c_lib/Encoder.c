@@ -183,7 +183,7 @@ ISR( PCINT0_vect )
 ISR( INT6_vect )
 {
     // Equation to update the encoder count:
-    _right_counts += ( Right_A() ^ _last_right_B ) - ( _last_right_A ^ Right_A() );
+    _right_counts += ( Right_A() ^ _last_right_B ) - ( _last_right_A ^ Right_B() );
 
     // Update the stored encoder states:
     _last_right_A = Right_A();

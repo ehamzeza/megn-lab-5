@@ -49,13 +49,13 @@
 // static float z_transform_denominator[2] = {1.000000000000, 0.0};
 
 
-static float z_transform_numerator[2] = {3.962409525759f,-3.545764150520f};
-static float z_transform_denominator[2] = {1.000000000000f,-0.583354624761f};
+static float z_transform_numerator[2] = {3.962409525759,-3.545764150520};//{2.590338331988,-2.382303373020};
+static float z_transform_denominator[2] = {1.000000000000,-0.583354624761};//{1.000000000000,-0.791965041032};
 static uint8_t z_transform_order = 1;
 static float update_period = 0.002;
 
-static float wheel_base_width = 0.0848f;
-static float K_p = 93.883642643262f;
+static float wheel_base_width = 0.062f; //0.0848f;
+static float K_p = 93.883642643262;//100.0;//27.117966454625;
 static float max_abs_control = 400.0f;
 
 void Initialize_Modules( float _time_not_used_ )
@@ -101,7 +101,8 @@ void Initialize_Modules( float _time_not_used_ )
     Initialize_Task(&task_schedule_stop, -1, Task_Stop_Motors);
     Initialize_Task(&task_send_system_data, -1, Task_Send_System_Data);
 
-    Initialize_Task(&task_control_loop, update_period, Task_Control_Loop); //TODO two defs of 0.001
+    Initialize_Task(&task_control_loop, update_period, Task_Control_Loop);
+    Initialize_Task(&task_stop_control, -1.0f, Task_Stop_Control);
 
     // Activate tasks that should always run:
     Task_Activate( &task_message_handling ); 
@@ -124,6 +125,7 @@ int main( void )
         Task_USB_Upkeep();
 
         Task_Run_If_Ready(&task_control_loop);
+        Task_Run_If_Ready(&task_stop_control);
 
         // Lab 4 Tasks
         Task_Run_If_Ready(&task_schedule_stop);

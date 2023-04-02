@@ -425,6 +425,65 @@ void Task_Message_Handling( float _time_since_last )
                 command_processed = true;
             }
             break;
+        
+        case 'D':
+            if (USB_Msg_Length() >= _Message_Length('D')) {
+                USB_Msg_Get();
+
+                struct __attribute__ ((__packed__)) {
+                    float linear;
+                    float angular;
+                    float stop_time;
+                } data;
+
+                USB_Msg_Read_Into(&data, sizeof(data));
+
+                Skid_Steer_Command_Displacement(&car_controller, data.linear, data.angular);
+
+                task_stop_control.run_period = data.stop_time;
+                Task_Activate(&task_stop_control);
+
+                command_processed = true;
+            }
+            break;
+
+        case 'v':
+            if (USB_Msg_Length() >= _Message_Length('v')) {
+                USB_Msg_Get();
+
+                struct __attribute__ ((__packed__)) {
+                    float linear;
+                    float angular;
+                } data;
+
+                USB_Msg_Read_Into(&data, sizeof(data));
+
+                Skid_Steer_Command_Velocity(&car_controller, data.linear, data.angular);
+
+                command_processed = true;
+            }
+            break;
+
+        case 'V':
+            if (USB_Msg_Length() >= _Message_Length('V')) {
+                USB_Msg_Get();
+
+                struct __attribute__ ((__packed__)) {
+                    float linear;
+                    float angular;
+                    float stop_time;
+                } data;
+
+                USB_Msg_Read_Into(&data, sizeof(data));
+
+                Skid_Steer_Command_Velocity(&car_controller, data.linear, data.angular);
+
+                task_stop_control.run_period = data.stop_time;
+                Task_Activate(&task_stop_control);
+
+                command_processed = true;
+            }
+            break;
 
         default:
             // What to do if you dont recognize the command character

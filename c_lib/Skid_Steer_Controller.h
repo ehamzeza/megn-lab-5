@@ -104,6 +104,8 @@ void Skid_Steer_Command_Displacement( Skid_Steer_Controller_t* p_skid_steer_cntr
  */
 void Skid_Steer_Command_Velocity( Skid_Steer_Controller_t* p_skid_steer_cntr, float linear, float angular );
 
+void Skid_Steer_Stop( Skid_Steer_Controller_t* p_skid_steer_cntr);
+
 /**
  * @brief Skid_Steer_Control_Update executes a control update by comparing current measurments desired values and implements new control setpoints.
  *
