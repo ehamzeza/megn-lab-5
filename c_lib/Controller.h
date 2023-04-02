@@ -39,6 +39,7 @@
 #define _MEGN540_CONTROLLER_H
 
 #include "Filter.h"
+#include "SerialIO.h"
 
 typedef struct { Filter_Data_t controller; float kp; float target_pos; float target_vel; float update_period;} Controller_t;
 
@@ -47,7 +48,15 @@ typedef struct { Filter_Data_t controller; float kp; float target_pos; float tar
  */
 inline float Saturate( float value, float ABS_MAX )
 {
-    return (value > ABS_MAX)?ABS_MAX:(value < -ABS_MAX)?-ABS_MAX:value;
+    // return (value > ABS_MAX)?ABS_MAX:(value < -ABS_MAX)?-ABS_MAX:value;
+
+    if (value < -ABS_MAX)
+        return -ABS_MAX;
+    
+    if (value > ABS_MAX)
+        return ABS_MAX;
+
+    return value;
 }
 
 /**

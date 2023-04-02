@@ -45,15 +45,17 @@
 // Best to identify them as "static" to make them indentified as internal and start with a "_" to identify as internal.
 // Try to initialize them if possible, so their values are never arbitrary.
 
-static float z_transform_numerator[2] = {1.0, 0.0};
-static float z_transform_denominator[2] = {1.000000000000, 0.0};
+// static float z_transform_numerator[2] = {1.0, 0.0};
+// static float z_transform_denominator[2] = {1.000000000000, 0.0};
 
 
-// static float z_transform_numerator[2] = {3.962409525759,-3.545764150520};
-// static float z_transform_denominator[2] = {1.000000000000,-0.583354624761};
-static uint8_t z_transform_order = 2;
+static float z_transform_numerator[2] = {3.962409525759f,-3.545764150520f};
+static float z_transform_denominator[2] = {1.000000000000f,-0.583354624761f};
+static uint8_t z_transform_order = 1;
+static float update_period = 0.002;
+
 static float wheel_base_width = 0.0848f;
-static float conversion_to_speed_control = 1.0f;
+static float K_p = 93.883642643262f;
 static float max_abs_control = 400.0f;
 
 void Initialize_Modules( float _time_not_used_ )
@@ -70,8 +72,9 @@ void Initialize_Modules( float _time_not_used_ )
                           z_transform_numerator,
                           z_transform_denominator,
                           z_transform_order,
+                          update_period,
                           wheel_base_width,
-                          conversion_to_speed_control,
+                          K_p,
                           max_abs_control,
                           Encoder_Rad_Left,
                           Encoder_Rad_Right,
@@ -98,7 +101,7 @@ void Initialize_Modules( float _time_not_used_ )
     Initialize_Task(&task_schedule_stop, -1, Task_Stop_Motors);
     Initialize_Task(&task_send_system_data, -1, Task_Send_System_Data);
 
-    Initialize_Task(&task_control_loop, 0.0019998139401797, Task_Control_Loop); //TODO two defs of 0.001
+    Initialize_Task(&task_control_loop, update_period, Task_Control_Loop); //TODO two defs of 0.001
 
     // Activate tasks that should always run:
     Task_Activate( &task_message_handling ); 
@@ -112,6 +115,9 @@ void Initialize_Modules( float _time_not_used_ )
 int main( void )
 {    
     Initialize_Modules( 0.0 );
+
+    Controller_SetTo(&car_controller.controller_left, 0.0f);
+    Controller_SetTo(&car_controller.controller_right, 0.0f);
 
     for( ;; ) {
 

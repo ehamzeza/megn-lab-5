@@ -74,6 +74,7 @@ typedef struct {
  * @param z_transform_numerator the controller's z-transform numerator
  * @param z_transform_denominator the controller's z-transform denominator
  * @param z_transform_order the controller's order
+ * @param update_period The update period
  * @param wheel_base_width the axel-width between treds
  * @param conversion_speed_to_control the conversion from m/s to control units (pwm?)
  * @param max_abs_control the absolute maximum control for satruation in control units (pwm?)
@@ -82,7 +83,7 @@ typedef struct {
  * @param control_left_fcn_ptr a function pointer to the left side's control application
  * @param control_right_fcn_ptr a founction pointer to the right side's control applicaion
  */
-void Initialize_Skid_Steer( Skid_Steer_Controller_t* p_skid_steer_cntr, float* z_transform_numerator, float* z_transform_denominator, uint8_t z_transform_order,
+void Initialize_Skid_Steer( Skid_Steer_Controller_t* p_skid_steer_cntr, float* z_transform_numerator, float* z_transform_denominator, uint8_t z_transform_order, float update_period,
                             float wheel_base_width, float conversion_speed_to_control, float max_abs_control, float ( *measurement_left_fcn_ptr )( void ),
                             float ( *measurement_right_fcn_ptr )( void ), void ( *control_left_fcn_ptr )( int16_t ), void ( *control_right_fcn_ptr )( int16_t ) );
 

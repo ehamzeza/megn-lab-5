@@ -49,19 +49,19 @@
  */
 void Filter_Init( Filter_Data_t* p_filt, float* numerator_coeffs, float* denominator_coeffs, uint8_t order )
 {
-    rb_initialize_F( &p_filt->numerator );
-    rb_initialize_F( &p_filt->denominator );
-    rb_initialize_F( &p_filt->in_list );
-    rb_initialize_F( &p_filt->out_list );
+    rb_initialize_F(&p_filt->numerator);
+	rb_initialize_F(&p_filt->denominator);
+	rb_initialize_F(&p_filt->in_list);
+	rb_initialize_F(&p_filt->out_list);
+	
+	for (uint8_t i = 0; i < order + 1; i++)
+	{
+		rb_push_back_F(&p_filt->numerator, numerator_coeffs[i]);
+		rb_push_back_F(&p_filt->denominator, denominator_coeffs[i]);
 
-    for( int i = 0; i <= order; i++ ) {
-        rb_push_back_F( &p_filt->numerator, numerator_coeffs[i] );
-        rb_push_back_F( &p_filt->denominator, denominator_coeffs[i] );
-        rb_push_back_F( &p_filt->in_list, 0 );
-        rb_push_back_F( &p_filt->out_list, 0 );
-    }
-
-    return;
+		rb_push_front_F(&p_filt->in_list, 0.0f);
+		rb_push_front_F(&p_filt->out_list, 0.0f);
+	}
 }
 
 /**
@@ -72,12 +72,17 @@ void Filter_Init( Filter_Data_t* p_filt, float* numerator_coeffs, float* denomin
  */
 void Filter_ShiftBy( Filter_Data_t* p_filt, float shift_amount )
 {
-    for( int i = 0; i < rb_length_F( &p_filt->in_list ); i++ ) {
-        rb_set_F( &p_filt->in_list, i, rb_get_F( &p_filt->in_list, i ) + shift_amount );
-        rb_set_F( &p_filt->out_list, i, rb_get_F( &p_filt->out_list, i ) + shift_amount );
-    }
-
-    return;
+    for (uint8_t i = 0; i < rb_length_F(&p_filt->in_list); i++)
+	{
+		float original_value = rb_get_F(&p_filt->in_list, i);
+		rb_set_F(&p_filt->in_list, i, original_value + shift_amount);
+	}
+	
+	for (uint8_t i = 0; i < rb_length_F(&p_filt->out_list); i++)
+	{
+		float original_value = rb_get_F(&p_filt->out_list, i);
+		rb_set_F(&p_filt->out_list, i, original_value + shift_amount);
+	}
 }
 
 /**
@@ -88,12 +93,11 @@ void Filter_ShiftBy( Filter_Data_t* p_filt, float shift_amount )
  */
 void Filter_SetTo( Filter_Data_t* p_filt, float amount )
 {
-    for( int i = 0; i < rb_length_F( &p_filt->in_list ); i++ ) {
-        rb_set_F( &p_filt->in_list, i, amount );
-        rb_set_F( &p_filt->out_list, i, amount );
-    }
-
-    return;
+    for (uint8_t i = 0; i < rb_length_F(&p_filt->in_list); i++)
+		rb_set_F(&p_filt->in_list, i, amount);
+	
+	for (uint8_t i = 0; i < rb_length_F(&p_filt->out_list); i++)
+		rb_set_F(&p_filt->out_list, i, amount);
 }
 
 /**
@@ -104,22 +108,25 @@ void Filter_SetTo( Filter_Data_t* p_filt, float amount )
  */
 float Filter_Value( Filter_Data_t* p_filt, float value )
 {
-    rb_push_front_F( &p_filt->in_list, value );
+    rb_push_front_F(&p_filt->in_list, value);
+	// rb_pop_back_F(&p_filt->in_list);
 
-    float sum_in  = 0;
-    float sum_out = 0;
+	float running_a_sum = 0.0f;
+	float running_b_sum = 0.0f;
 
-    for( int i = 0; i < rb_length_F( &p_filt->in_list ); i++ ) {
-        sum_in += rb_get_F( &p_filt->in_list, i ) * rb_get_F( &p_filt->numerator, i );
+	// Perform the summation on the b coefficients
+	for (uint8_t i = 1; i < rb_length_F(&p_filt->denominator); i++)
+		running_a_sum += rb_get_F(&p_filt->denominator, i) * rb_get_F(&p_filt->out_list, i - 1);
+	
+	// Perform the summation on the a coefficients
+	for (uint8_t i = 0; i < rb_length_F(&p_filt->numerator); i++)
+		running_b_sum += rb_get_F(&p_filt->numerator, i) * rb_get_F(&p_filt->in_list, i);
 
-        if( i > 0 ) {
-            sum_out += rb_get_F( &p_filt->out_list, i - 1 ) * rb_get_F( &p_filt->denominator, i );
-        }
-    }
-
-    float filter_val = ( sum_in - sum_out ) / rb_get_F( &p_filt->denominator, 0 );
-    rb_push_front_F( &p_filt->out_list, filter_val );
-    return filter_val;
+	// Perform the calculation
+	float filtered_output = (running_b_sum - running_a_sum) / rb_get_F(&p_filt->denominator, 0);
+	rb_push_front_F(&p_filt->out_list, filtered_output);
+	// rb_pop_back_F(&p_filt->out_list);
+	return filtered_output;
 }
 
 /**
@@ -128,5 +135,5 @@ float Filter_Value( Filter_Data_t* p_filt, float value )
  */
 float Filter_Last_Output( Filter_Data_t* p_filt )
 {
-    return rb_pop_front_F( &p_filt->out_list );
+	return rb_get_F(&p_filt->out_list, 0);
 }

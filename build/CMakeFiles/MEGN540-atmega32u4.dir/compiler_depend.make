@@ -23,7 +23,128 @@ CMakeFiles/MEGN540-atmega32u4.dir/c_lib/Controller.c.obj: ../c_lib/Controller.c 
   ../c_lib/Filter.h \
   ../c_lib/Ring_Buffer.h \
   /usr/lib/gcc/avr/5.4.0/include/stdint.h \
-  /usr/lib/avr/include/stdint.h
+  /usr/lib/avr/include/stdint.h \
+  ../c_lib/SerialIO.h \
+  ../c_lib/USB_Config/Descriptors.h \
+  ../lufa/LUFA/Drivers/USB/USB.h \
+  ../lufa/LUFA/Common/Common.h \
+  /usr/lib/gcc/avr/5.4.0/include/stdbool.h \
+  /usr/lib/avr/include/string.h \
+  /usr/lib/gcc/avr/5.4.0/include/stddef.h \
+  ../lufa/LUFA/Common/Architectures.h \
+  ../lufa/LUFA/Common/BoardTypes.h \
+  ../lufa/LUFA/Common/ArchitectureSpecific.h \
+  ../lufa/LUFA/Common/CompilerSpecific.h \
+  ../lufa/LUFA/Common/Attributes.h \
+  /usr/lib/avr/include/avr/io.h \
+  /usr/lib/avr/include/avr/sfr_defs.h \
+  /usr/lib/avr/include/inttypes.h \
+  /usr/lib/avr/include/avr/iom32u4.h \
+  /usr/lib/avr/include/avr/portpins.h \
+  /usr/lib/avr/include/avr/common.h \
+  /usr/lib/avr/include/avr/version.h \
+  /usr/lib/avr/include/avr/fuse.h \
+  /usr/lib/avr/include/avr/lock.h \
+  /usr/lib/avr/include/avr/interrupt.h \
+  /usr/lib/avr/include/avr/pgmspace.h \
+  /usr/lib/avr/include/avr/eeprom.h \
+  /usr/lib/avr/include/avr/boot.h \
+  /usr/lib/gcc/avr/5.4.0/include-fixed/limits.h \
+  /usr/lib/avr/include/math.h \
+  /usr/lib/avr/include/util/delay.h \
+  /usr/lib/avr/include/util/delay_basic.h \
+  ../lufa/LUFA/Common/Endianness.h \
+  ../lufa/LUFA/Drivers/USB/Core/USBMode.h \
+  ../lufa/LUFA/Common/Common.h \
+  ../lufa/LUFA/Drivers/USB/Core/USBTask.h \
+  ../lufa/LUFA/Drivers/USB/Core/USBMode.h \
+  ../lufa/LUFA/Drivers/USB/Core/USBController.h \
+  ../lufa/LUFA/Drivers/USB/Core/AVR8/USBController_AVR8.h \
+  ../lufa/LUFA/Common/Common.h \
+  ../lufa/LUFA/Drivers/USB/Core/USBMode.h \
+  ../lufa/LUFA/Drivers/USB/Core/Events.h \
+  ../lufa/LUFA/Common/Common.h \
+  ../lufa/LUFA/Drivers/USB/Core/USBMode.h \
+  ../lufa/LUFA/Drivers/USB/Core/USBTask.h \
+  ../lufa/LUFA/Drivers/USB/Core/USBInterrupt.h \
+  ../lufa/LUFA/Drivers/USB/Core/AVR8/USBInterrupt_AVR8.h \
+  ../lufa/LUFA/Common/Common.h \
+  ../lufa/LUFA/Drivers/USB/Core/USBMode.h \
+  ../lufa/LUFA/Drivers/USB/Core/Events.h \
+  ../lufa/LUFA/Drivers/USB/Core/USBController.h \
+  ../lufa/LUFA/Drivers/USB/Core/Device.h \
+  ../lufa/LUFA/Drivers/USB/Core/StdDescriptors.h \
+  ../lufa/LUFA/Drivers/USB/Core/Events.h \
+  ../lufa/LUFA/Drivers/USB/Core/USBInterrupt.h \
+  ../lufa/LUFA/Drivers/USB/Core/Endpoint.h \
+  ../lufa/LUFA/Drivers/USB/Core/AVR8/Endpoint_AVR8.h \
+  ../lufa/LUFA/Drivers/USB/Core/USBTask.h \
+  ../lufa/LUFA/Drivers/USB/Core/USBInterrupt.h \
+  ../lufa/LUFA/Drivers/USB/Core/AVR8/Device_AVR8.h \
+  ../lufa/LUFA/Drivers/USB/Core/StdDescriptors.h \
+  ../lufa/LUFA/Drivers/USB/Core/Endpoint.h \
+  ../lufa/LUFA/Drivers/USB/Core/Endpoint.h \
+  ../lufa/LUFA/Drivers/USB/Core/DeviceStandardReq.h \
+  ../lufa/LUFA/Drivers/USB/Core/StdRequestType.h \
+  ../lufa/LUFA/Drivers/USB/Core/USBTask.h \
+  ../lufa/LUFA/Drivers/USB/Core/USBController.h \
+  ../lufa/LUFA/Drivers/USB/Core/EndpointStream.h \
+  ../lufa/LUFA/Drivers/USB/Core/AVR8/EndpointStream_AVR8.h \
+  ../lufa/LUFA/Drivers/USB/Core/Events.h \
+  ../lufa/LUFA/Drivers/USB/Core/StdRequestType.h \
+  ../lufa/LUFA/Drivers/USB/Core/StdDescriptors.h \
+  ../lufa/LUFA/Drivers/USB/Core/DeviceStandardReq.h \
+  ../lufa/LUFA/Drivers/USB/Core/Events.h \
+  ../lufa/LUFA/Drivers/USB/Core/StdDescriptors.h \
+  ../lufa/LUFA/Drivers/USB/Core/ConfigDescriptors.h \
+  ../lufa/LUFA/Drivers/USB/Core/HostStandardReq.h \
+  ../lufa/LUFA/Drivers/USB/Core/USBController.h \
+  ../lufa/LUFA/Drivers/USB/Core/USBInterrupt.h \
+  ../lufa/LUFA/Drivers/USB/Core/Device.h \
+  ../lufa/LUFA/Drivers/USB/Core/Endpoint.h \
+  ../lufa/LUFA/Drivers/USB/Core/DeviceStandardReq.h \
+  ../lufa/LUFA/Drivers/USB/Core/EndpointStream.h \
+  ../lufa/LUFA/Drivers/USB/Class/AndroidAccessoryClass.h \
+  ../lufa/LUFA/Drivers/USB/Core/USBMode.h \
+  ../lufa/LUFA/Drivers/USB/Class/AudioClass.h \
+  ../lufa/LUFA/Drivers/USB/Class/Device/AudioClassDevice.h \
+  ../lufa/LUFA/Drivers/USB/USB.h \
+  ../lufa/LUFA/Drivers/USB/Class/Common/AudioClassCommon.h \
+  ../lufa/LUFA/Drivers/USB/Core/StdDescriptors.h \
+  ../lufa/LUFA/Drivers/USB/Class/CCIDClass.h \
+  ../lufa/LUFA/Drivers/USB/Class/Device/CCIDClassDevice.h \
+  ../lufa/LUFA/Drivers/USB/Class/Common/CCIDClassCommon.h \
+  ../lufa/LUFA/Drivers/USB/Class/CDCClass.h \
+  ../lufa/LUFA/Drivers/USB/Class/Device/CDCClassDevice.h \
+  ../lufa/LUFA/Drivers/USB/Class/Common/CDCClassCommon.h \
+  /usr/lib/avr/include/stdio.h \
+  /usr/lib/gcc/avr/5.4.0/include/stdarg.h \
+  ../lufa/LUFA/Drivers/USB/Class/HIDClass.h \
+  ../lufa/LUFA/Drivers/USB/Class/Device/HIDClassDevice.h \
+  ../lufa/LUFA/Drivers/USB/Class/Common/HIDClassCommon.h \
+  ../lufa/LUFA/Drivers/USB/Class/Common/HIDParser.h \
+  ../lufa/LUFA/Common/Common.h \
+  ../lufa/LUFA/Drivers/USB/Class/Common/HIDReportData.h \
+  ../lufa/LUFA/Drivers/USB/Class/Common/HIDClassCommon.h \
+  ../lufa/LUFA/Drivers/USB/Class/MassStorageClass.h \
+  ../lufa/LUFA/Drivers/USB/Class/Device/MassStorageClassDevice.h \
+  ../lufa/LUFA/Drivers/USB/Class/Common/MassStorageClassCommon.h \
+  ../lufa/LUFA/Drivers/USB/Class/MIDIClass.h \
+  ../lufa/LUFA/Drivers/USB/Class/Device/MIDIClassDevice.h \
+  ../lufa/LUFA/Drivers/USB/Class/Common/MIDIClassCommon.h \
+  ../lufa/LUFA/Drivers/USB/Class/Common/AudioClassCommon.h \
+  ../lufa/LUFA/Drivers/USB/Class/PrinterClass.h \
+  ../lufa/LUFA/Drivers/USB/Class/Device/PrinterClassDevice.h \
+  ../lufa/LUFA/Drivers/USB/Class/Common/PrinterClassCommon.h \
+  ../lufa/LUFA/Drivers/USB/Class/RNDISClass.h \
+  ../lufa/LUFA/Drivers/USB/Class/Device/RNDISClassDevice.h \
+  ../lufa/LUFA/Drivers/USB/Class/Common/RNDISClassCommon.h \
+  ../lufa/LUFA/Drivers/USB/Class/Common/CDCClassCommon.h \
+  ../lufa/LUFA/Drivers/USB/Class/StillImageClass.h \
+  ../lufa/LUFA/Platform/Platform.h \
+  ../lufa/LUFA/Common/Common.h \
+  /usr/lib/avr/include/avr/power.h \
+  /usr/lib/avr/include/avr/wdt.h
 
 CMakeFiles/MEGN540-atmega32u4.dir/c_lib/Encoder.c.obj: ../c_lib/Encoder.c \
   ../c_lib/Encoder.h \
@@ -1179,6 +1300,20 @@ CMakeFiles/MEGN540-atmega32u4.dir/c_lib/Timing.c.obj: ../c_lib/Timing.c \
 
 ../c_lib/Lab2_Tasks.c:
 
+../c_lib/Timing.h:
+
+../c_lib/Lab4_Tasks.c:
+
+../c_lib/Lab1_Tasks.c:
+
+../c_lib/Filter.c:
+
+../c_lib/Encoder.h:
+
+../c_lib/Message_Handling.c:
+
+../c_lib/Encoder.c:
+
 /usr/lib/avr/include/avr/power.h:
 
 ../c_lib/Skid_Steer_Controller.h:
@@ -1194,6 +1329,10 @@ CMakeFiles/MEGN540-atmega32u4.dir/c_lib/Timing.c.obj: ../c_lib/Timing.c \
 ../c_lib/Lab3_Tasks.h:
 
 ../lufa/LUFA/Drivers/USB/Class/PrinterClass.h:
+
+../c_lib/Task_Management.h:
+
+../lufa/LUFA/Drivers/USB/Class/Device/MIDIClassDevice.h:
 
 ../c_lib/MotorPWM.h:
 
@@ -1223,53 +1362,23 @@ CMakeFiles/MEGN540-atmega32u4.dir/c_lib/Timing.c.obj: ../c_lib/Timing.c \
 
 ../lufa/LUFA/Drivers/USB/Class/CCIDClass.h:
 
-../lufa/LUFA/Drivers/USB/Class/AudioClass.h:
+../lufa/LUFA/Common/ArchitectureSpecific.h:
 
-../lufa/LUFA/Drivers/USB/Class/AndroidAccessoryClass.h:
+../lufa/LUFA/Drivers/USB/Class/Common/MIDIClassCommon.h:
 
-../lufa/LUFA/Drivers/USB/Core/ConfigDescriptors.h:
+/usr/lib/gcc/avr/5.4.0/include/stddef.h:
 
-../c_lib/Lab4_Tasks.h:
+../c_lib/Lab1_Tasks.h:
 
-../lufa/LUFA/Drivers/USB/Class/Device/AudioClassDevice.h:
+../c_lib/SerialIO.h:
 
-../lufa/LUFA/Drivers/USB/Core/AVR8/EndpointStream_AVR8.h:
+/usr/lib/avr/include/string.h:
 
-../lufa/LUFA/Drivers/USB/Core/EndpointStream.h:
+../c_lib/Lab5_Tasks.c:
 
-../c_lib/Filter.c:
+../c_lib/Battery_Monitor.c:
 
-../lufa/LUFA/Drivers/USB/Class/Device/CCIDClassDevice.h:
-
-/usr/lib/avr/include/math.h:
-
-/usr/lib/gcc/avr/5.4.0/include-fixed/limits.h:
-
-../c_lib/Timing.h:
-
-../c_lib/Skid_Steer_Controller.c:
-
-/usr/lib/avr/include/util/delay_basic.h:
-
-../lufa/LUFA/Drivers/USB/Core/USBController.h:
-
-../lufa/LUFA/Drivers/USB/Class/Device/MIDIClassDevice.h:
-
-../c_lib/Task_Management.h:
-
-../lufa/LUFA/Drivers/USB/Core/DeviceStandardReq.h:
-
-../c_lib/Encoder.h:
-
-../c_lib/USB_Config/Descriptors.h:
-
-../c_lib/Lab4_Tasks.c:
-
-../c_lib/Lab1_Tasks.c:
-
-../c_lib/Message_Handling.c:
-
-../c_lib/Encoder.c:
+../lufa/LUFA/Drivers/USB/USB.h:
 
 /usr/lib/gcc/avr/5.4.0/include/stdbool.h:
 
@@ -1278,10 +1387,6 @@ CMakeFiles/MEGN540-atmega32u4.dir/c_lib/Timing.c.obj: ../c_lib/Timing.c \
 ../lufa/LUFA/Drivers/USB/Class/Common/AudioClassCommon.h:
 
 /usr/lib/avr/include/stdint.h:
-
-/usr/lib/avr/include/avr/interrupt.h:
-
-/usr/lib/avr/include/inttypes.h:
 
 ../lufa/LUFA/Drivers/USB/Class/Common/CCIDClassCommon.h:
 
@@ -1293,16 +1398,6 @@ CMakeFiles/MEGN540-atmega32u4.dir/c_lib/Timing.c.obj: ../c_lib/Timing.c \
 
 /usr/lib/avr/include/avr/boot.h:
 
-../c_lib/SerialIO.h:
-
-../c_lib/Lab1_Tasks.h:
-
-../c_lib/Lab5_Tasks.c:
-
-../c_lib/Battery_Monitor.c:
-
-/usr/lib/avr/include/string.h:
-
 ../lufa/LUFA/Common/Architectures.h:
 
 /usr/lib/avr/include/avr/common.h:
@@ -1312,12 +1407,6 @@ CMakeFiles/MEGN540-atmega32u4.dir/c_lib/Timing.c.obj: ../c_lib/Timing.c \
 ../lufa/LUFA/Drivers/USB/Core/USBTask.h:
 
 /usr/lib/avr/include/avr/lock.h:
-
-../lufa/LUFA/Drivers/USB/Class/Device/HIDClassDevice.h:
-
-../lufa/LUFA/Drivers/USB/Core/HostStandardReq.h:
-
-../c_lib/Filter.h:
 
 ../c_lib/Ring_Buffer.h:
 
@@ -1333,6 +1422,12 @@ CMakeFiles/MEGN540-atmega32u4.dir/c_lib/Timing.c.obj: ../c_lib/Timing.c \
 
 /usr/lib/avr/include/avr/portpins.h:
 
+/usr/lib/gcc/avr/5.4.0/include/stdarg.h:
+
+../lufa/LUFA/Common/BoardTypes.h:
+
+../c_lib/USB_Config/Descriptors.h:
+
 /usr/lib/avr/include/avr/iom32u4.h:
 
 /usr/lib/avr/include/avr/io.h:
@@ -1343,33 +1438,37 @@ CMakeFiles/MEGN540-atmega32u4.dir/c_lib/Timing.c.obj: ../c_lib/Timing.c \
 
 ../lufa/LUFA/Drivers/USB/Core/AVR8/USBInterrupt_AVR8.h:
 
-../lufa/LUFA/Drivers/USB/Core/Events.h:
-
-../c_lib/Controller.c:
-
-../c_lib/Battery_Monitor.h:
-
 /usr/lib/avr/include/avr/version.h:
-
-../lufa/LUFA/Drivers/USB/USB.h:
-
-../lufa/LUFA/Drivers/USB/Class/Common/MIDIClassCommon.h:
-
-/usr/lib/gcc/avr/5.4.0/include/stddef.h:
-
-../lufa/LUFA/Common/ArchitectureSpecific.h:
-
-/usr/lib/gcc/avr/5.4.0/include/stdarg.h:
-
-../lufa/LUFA/Common/BoardTypes.h:
 
 ../lufa/LUFA/Drivers/USB/Class/Device/MassStorageClassDevice.h:
 
 ../lufa/LUFA/Common/Attributes.h:
 
-../lufa/LUFA/Drivers/USB/Core/Device.h:
+/usr/lib/avr/include/inttypes.h:
 
-/usr/lib/avr/include/avr/eeprom.h:
+/usr/lib/avr/include/avr/interrupt.h:
+
+../c_lib/Controller.c:
+
+../c_lib/Battery_Monitor.h:
+
+../lufa/LUFA/Drivers/USB/Core/Events.h:
+
+../lufa/LUFA/Drivers/USB/Core/DeviceStandardReq.h:
+
+/usr/lib/gcc/avr/5.4.0/include-fixed/limits.h:
+
+../lufa/LUFA/Drivers/USB/Class/Device/CCIDClassDevice.h:
+
+/usr/lib/avr/include/math.h:
+
+../lufa/LUFA/Drivers/USB/Class/AndroidAccessoryClass.h:
+
+../c_lib/Skid_Steer_Controller.c:
+
+/usr/lib/avr/include/util/delay_basic.h:
+
+../lufa/LUFA/Drivers/USB/Core/USBController.h:
 
 ../lufa/LUFA/Common/Common.h:
 
@@ -1380,6 +1479,10 @@ CMakeFiles/MEGN540-atmega32u4.dir/c_lib/Timing.c.obj: ../c_lib/Timing.c \
 ../lufa/LUFA/Drivers/USB/Core/USBMode.h:
 
 ../lufa/LUFA/Drivers/USB/Core/USBInterrupt.h:
+
+/usr/lib/avr/include/avr/eeprom.h:
+
+../lufa/LUFA/Drivers/USB/Core/Device.h:
 
 ../lufa/LUFA/Drivers/USB/Core/StdDescriptors.h:
 
@@ -1394,3 +1497,21 @@ CMakeFiles/MEGN540-atmega32u4.dir/c_lib/Timing.c.obj: ../c_lib/Timing.c \
 /usr/lib/avr/include/avr/wdt.h:
 
 ../lufa/LUFA/Drivers/USB/Core/AVR8/Device_AVR8.h:
+
+../c_lib/Lab4_Tasks.h:
+
+../lufa/LUFA/Drivers/USB/Class/Device/AudioClassDevice.h:
+
+../lufa/LUFA/Drivers/USB/Core/EndpointStream.h:
+
+../lufa/LUFA/Drivers/USB/Core/AVR8/EndpointStream_AVR8.h:
+
+../lufa/LUFA/Drivers/USB/Core/ConfigDescriptors.h:
+
+../lufa/LUFA/Drivers/USB/Class/Device/HIDClassDevice.h:
+
+../c_lib/Filter.h:
+
+../lufa/LUFA/Drivers/USB/Core/HostStandardReq.h:
+
+../lufa/LUFA/Drivers/USB/Class/AudioClass.h:
