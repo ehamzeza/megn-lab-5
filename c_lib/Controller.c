@@ -30,7 +30,9 @@ float Controller_Update( Controller_t* p_cont, float measurement, float dt )
 
     float pwm = p_cont->kp * (p_cont->target_pos - now);
 
-    p_cont->target_pos += dt * p_cont->target_vel;
+    // p_cont->target_pos += dt * p_cont->target_vel;
+    if (p_cont->target_vel != 0)
+        p_cont->target_pos = measurement + (p_cont->target_vel * dt * 0.0001);
 
     return Saturate(pwm, 400.0f);
 }

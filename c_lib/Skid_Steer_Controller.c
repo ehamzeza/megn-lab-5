@@ -26,6 +26,9 @@ void Skid_Steer_Command_Displacement( Skid_Steer_Controller_t* p_skid_steer_cntr
 {
     p_skid_steer_cntr->controller_left.target_pos += (linear - angular * (p_skid_steer_cntr->wheel_base_width / 1.0f)) * (2.0f / wheel_diameter);
     p_skid_steer_cntr->controller_right.target_pos += (linear + angular * (p_skid_steer_cntr->wheel_base_width / 1.0f)) * (2.0f / wheel_diameter);
+
+    p_skid_steer_cntr->controller_left.target_vel = 0.0f;
+    p_skid_steer_cntr->controller_right.target_vel = 0.0f;
 }
 
 void Skid_Steer_Command_Velocity( Skid_Steer_Controller_t* p_skid_steer_cntr, float linear, float angular )
