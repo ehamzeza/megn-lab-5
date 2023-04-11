@@ -54,7 +54,7 @@ static float z_transform_denominator[2] = {1.000000000000,-0.583354624761};//{1.
 static uint8_t z_transform_order = 1;
 static float update_period = 0.002;
 
-static float wheel_base_width = 0.062f; //0.0848f;
+static float wheel_base_width = 0.0547f; //0.0848f;
 static float K_p = 93.883642643262;//100.0;//27.117966454625;
 static float max_abs_control = 400.0f;
 

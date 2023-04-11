@@ -32,7 +32,7 @@ float Controller_Update( Controller_t* p_cont, float measurement, float dt )
 
     // p_cont->target_pos += dt * p_cont->target_vel;
     if (p_cont->target_vel != 0)
-        p_cont->target_pos = measurement + (p_cont->target_vel * dt * 0.0001);
+        p_cont->target_pos = measurement + (p_cont->target_vel * dt);
 
     return Saturate(pwm, 400.0f);
 }

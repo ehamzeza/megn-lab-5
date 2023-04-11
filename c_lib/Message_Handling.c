@@ -476,9 +476,10 @@ void Task_Message_Handling( float _time_since_last )
 
                 USB_Msg_Read_Into(&data, sizeof(data));
 
-                Skid_Steer_Command_Velocity(&car_controller, data.linear, data.angular);
+                Skid_Steer_Command_Velocity(&car_controller, data.linear * 0.0005, data.angular * 0.000025);
 
-                task_stop_control.run_period = data.stop_time;
+                task_stop_control.run_period = data.stop_time * 1000.0f;
+                task_stop_control.time_last_ran = Timing_Get_Time();
                 Task_Activate(&task_stop_control);
 
                 command_processed = true;
